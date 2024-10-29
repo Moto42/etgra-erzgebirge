@@ -1,0 +1,40 @@
+# Workflow depicated, it is being kept here a bit for "just in case"
+on:
+  push:
+    branches:
+      - nonexistantImage
+      # - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  update_site:
+    runs-on: docker
+    container: 
+      image: alpine
+    steps:
+      # install the prereqs here
+      - name: install build requirements
+        run: apk update && apk add curl zip rsync openssh npm git;
+      - name: Checkout repo
+        uses: https://code.forgejo.org/actions/checkout@v4
+      # project should now be at $GITHUB_WORKSPACE
+      - run: cd $GITHUB_WORKSPACE;
+      - run: npm install;
+      - name: build the site content
+        run: npm run build;
+      # Install cloudflared
+      ## DL cloudflared
+      - name: install Cloudflared
+        run: curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -o /usr/bin/cloudflared && chmod 777 /usr/bin/cloudflared;
+      # set up the ssh config
+      # TODO replace ssh.bytesandbeans.com, and 'testman' user name with a var, 
+      - name: setup ssh config
+        run: mkdir ~/.ssh && touch ~/.ssh/config && echo "Host target" >> ~/.ssh/config && echo "HostName ssh.bytesandbeans.com" >> ~/.ssh/config &&  echo "IdentityFile ~/.ssh/target" >> ~/.ssh/config && echo "User forgejoactions" >> ~/.ssh/config && echo "ProxyCommand /usr/bin/cloudflared access ssh --hostname %h" >> ~/.ssh/config;
+      - run: echo "${{secrets.ssh_private_key}}" > ~/.ssh/target && chmod 600 ~/.ssh/target*;
+      # rsync to remote
+      - name: rsync to live server
+        run: rsync -re "ssh -o StrictHostKeyChecking=no" $GITHUB_WORKSPACE/_site/ target:~/htdocs/transformacion135.com/;
+      

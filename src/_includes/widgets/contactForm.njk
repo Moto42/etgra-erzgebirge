@@ -1,0 +1,42 @@
+{# a simple contact form # {% from "widgets/contactForm.njk/" include
+contactForm %} # # ⚠️ set action with env-vart CONTACT_FORM_ACTION, defaults to
+'#', CONTACT_FORM_METHOD defaults to 'POST' # ⚠️ Requires the env-var
+RECAPTCHA_SITE_KEY to be set # # You will need to update this code to work with
+your form handling API. # Currently has the code for recaptcha set up. #} {%
+macro contactForm() %}
+<form
+  class="mx-auto max-w-screen-sm"
+  action="{% envar 'CONTACT_FORM_ACTION' | default('#',true) %}"
+  method="{% envar 'CONTACT_FORM_METHOD' | default('POST',true) %}"
+>
+  <h2 class="">Contact Us</h2>
+  {% call fieldcontainer() -%}
+  <label for="contactForm_subject">Subject</label>
+  <input type="text" name="subject" id="contactForm_subject" />
+  {%- endcall %} {% call fieldcontainer() -%}
+  <label for="contactForm_subject">Subject</label>
+  <input type="text" name="subject" id="contactForm_subject" />
+  {%- endcall %} {% call fieldcontainer() -%}
+  <label for="contactForm_email">Email</label>
+  <input type="email" name="email" id="contactForm_email" />
+  {%- endcall %} {% call fieldcontainer() -%}
+  <label for="contactForm_message">Your Message</label>
+  <textarea name="message" id="contactForm_message"></textarea>
+  {%- endcall %}
+  <button type="button" class="g-recaptcha my-2 rounded-md bg-gray-600 px-2 py-1 text-white" data-sitekey="{% envar 'RECAPTCHA_SITE_KEY' %}" data-callback="onSubmit" data-action="submit">
+    Submit
+  </button>
+
+  {# reCaptch code #}
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    // callback to handle token
+    function onSubmit(token) {
+      document.currentScript.parentElement.submit()
+    }
+  </script>
+</form>
+{% endmacro %} {# just a macro for the fieldcontainers so we don't have to
+copypaste the css #} {% macro fieldcontainer() %}
+<div class="flex flex-col *:text-left">{{caller()}}</div>
+{% endmacro %}

@@ -1,0 +1,23 @@
+{# Base layout from hence all others flow. Just set's up the basic HTML and
+headers. #}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/tailwind.css" />
+    {# TODO: install alpine to project and bundle it #}
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js"
+    ></script>
+    <link rel="icon" type="image/png" href="/images/favicon.svg" />
+  </head>
+  <body
+    class="flex flex-col items-center min-h-screen w-full max-w-8xl mx-auto"
+  >
+    {{content | safe}}
+  </body>
+</html>

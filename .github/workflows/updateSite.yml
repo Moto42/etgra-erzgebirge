@@ -1,0 +1,44 @@
+name: Update the Website
+run-name: ${{ github.actor }} has pushed a change to the site.
+on:
+  push:
+    branches:
+      - main
+concurrency:
+  group: deployment
+  cancel-in-progress: true
+jobs:
+  Build-Site-Content:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Cache site content
+        uses: actions/cache@v4
+        with:
+          path: ./_site
+          key: site-content-${{hashFiles('**/src')}}
+          restore-keys: |
+            site-content-${{hashFiles('**/src')}}
+            site-content-
+      - name: instal node modules
+        run: npm install
+      - name: Build Site Content
+        run: npm run build
+  Upload-to-Server:
+    runs-on: ubuntu-latest
+    needs: Build-Site-Content
+    steps: 
+      - name: Pull Site Cache
+        # should put the current content of the site in ${{github.workspace}}/_site
+        uses: actions/cache/restore@v4
+        id: sitecontentcache
+        with:
+          path: ./_site
+          key: site-content-
+      - name: verify content was pulled\nreplace me with actual work
+        run: cat ${{github.workspace}}/_site/index.html
+          
+
+      

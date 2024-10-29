@@ -1,0 +1,28 @@
+{
+  "image": "node:current-alpine",
+  "features": {
+    "ghcr.io/cirolosapio/devcontainers-features/alpine-git": {}
+  },
+  "mounts": [
+    {
+      "source": "${devcontainerId}_node_modules",
+      "target": "${containerWorkspaceFolder}/node_modules",
+      "type": "volume"
+    }
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ronnidc.nunjucks",
+        "esbenp.prettier-vscode",
+        "guapibai.nunjucks-prettier",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  },
+  "containerEnv": {
+    "CHOKIDAR_USEPOLLING": "1"
+  },
+  "postCreateCommand": "npm install",
+  "postAttachCommand": "npm run start"
+}

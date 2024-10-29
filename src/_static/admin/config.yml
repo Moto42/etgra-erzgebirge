@@ -1,0 +1,30 @@
+local_backend: true
+backend:
+# Gitea settings
+  name: gitea
+  app_id:  # The Client ID provided by Gitea
+  api_root: <GITEA_BASE_URL>/api/v1 # API URL of your Gitea instance
+  base_url: <GITEA_BASE_URL> # Root URL of your Gitea instance
+  auth_endpoint: <GITEA_BASE_URL>/login/oauth/authorize
+  repo: "" # user/reponame
+  # optional, defaults to master
+  branch: main
+
+#  Where are uploads in the repo?
+media_folder: "src/_static/images/uploads"
+# Where are uploads in the live site?
+public_folder: "/images/uploads"
+
+collections:
+  - label: "Pages"
+    name: pages
+    delete: false
+    editor:
+      preview: false
+    files: 
+    - label: "Front Page"
+      name: "home"
+      file : "src/index.md"
+      fields:
+      - {label: "Title", name: "title", widget: "string"}
+      
