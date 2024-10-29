@@ -1,14 +1,10 @@
 local_backend: true
 backend:
-# Gitea settings
-  name: gitea
-  app_id:  # The Client ID provided by Gitea
-  api_root: <GITEA_BASE_URL>/api/v1 # API URL of your Gitea instance
-  base_url: <GITEA_BASE_URL> # Root URL of your Gitea instance
-  auth_endpoint: <GITEA_BASE_URL>/login/oauth/authorize
-  repo: "" # user/reponame
-  # optional, defaults to master
+#github
+  name: github
+  repo: "moto42/etgra-erzgebirge" 
   branch: main
+
 
 #  Where are uploads in the repo?
 media_folder: "src/_static/images/uploads"
