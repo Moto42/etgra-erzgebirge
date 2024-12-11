@@ -12,17 +12,23 @@ media_folder: "src/_static/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - label: "Pages"
-    name: pages
-    delete: false
+  - label: "Content Pages"
+    name: contentpages
+    folder: "src/pages"
+    delete: true
+    create: true
     editor:
       preview: false
-    files: 
-    - label: "Front Page"
-      name: "home"
-      file : "src/index.md"
-      fields:
-      - {label: "Title", name: "title", widget: "string"}
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: string
+        required: true
+      - label: "Content"
+        name: "body"
+        required: true
+        widget: markdown
+    
   - label: "Global Data"
     name: globaldata
     delete: false
