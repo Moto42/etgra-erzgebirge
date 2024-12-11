@@ -45,7 +45,10 @@ collections:
         editor_components:
           - image
           # - code-block
-    
+      - label: "Tags"
+        name: "tags"
+        widget: hidden
+        default: ["contentpages"]
   - label: "Global Data"
     name: globaldata
     delete: false
