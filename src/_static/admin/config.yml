@@ -28,6 +28,23 @@ collections:
         name: "body"
         required: true
         widget: markdown
+        buttons: 
+          - bold
+          - italic
+          - code
+          - link
+          # - heading-one
+          - heading-two
+          - heading-three
+          - heading-four
+          - heading-five
+          - heading-six
+          - quote
+          - bulleted-list
+          - numbered-list
+        editor_components:
+          - image
+          # - code-block
     
   - label: "Global Data"
     name: globaldata
