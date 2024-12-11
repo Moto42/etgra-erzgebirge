@@ -23,4 +23,25 @@ collections:
       file : "src/index.md"
       fields:
       - {label: "Title", name: "title", widget: "string"}
+  - label: "Global Data"
+    name: globaldata
+    delete: false
+    editor:
+      preview: false
+    files: 
+    - label: "Contact Info"
+      name: "contactinfo"
+      file : "src/_data/contactinfo.json"
+      fields:
+      - label: "phone"
+        name: "phone"
+        widget: "string"
+        hint: "Primary Business Contact Number"
+        pattern: ["[0-9]{3}-[0-9]{3}-[0-9]{4}", "Please enter phone number in ###-###-#### format"]
+      - label: "Address Line One"
+        name: "addr1"
+        widget: "string"
+      - label: "Address Line Two"
+        name: "addr2"
+        widget: "string"
       
