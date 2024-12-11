@@ -16,7 +16,8 @@
         "ronnidc.nunjucks",
         "esbenp.prettier-vscode",
         "guapibai.nunjucks-prettier",
-        "bradlc.vscode-tailwindcss"
+        "bradlc.vscode-tailwindcss",
+        "GitHub.vscode-pull-request-github"
       ]
     }
   },
