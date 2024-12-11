@@ -5,7 +5,7 @@ module.exports = function (eleventyConfig) {
   dotenv.config();
 
   // while in --serve, do not copy passthroughcopy'ed files, serve them directly.
-  eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+  // eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
 
   // src/_static is just copied directly to the root of the site.
   eleventyConfig.ignores.add("src/_static/");
