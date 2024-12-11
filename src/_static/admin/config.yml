@@ -45,4 +45,13 @@ collections:
       - label: "Address Line Two"
         name: "addr2"
         widget: "string"
-      
+    - label: "Header and Footer"
+      name: "headerfooter"
+      file: "src/_data/headerfooter.json"
+      fields:
+        - label: "Logo"
+          name: "logo"
+          widget: "image"
+          allow_multiple: false
+          choose_url: false
+          hint: The logotype that will appear in the header and footer of the page.
