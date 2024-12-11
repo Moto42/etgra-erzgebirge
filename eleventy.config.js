@@ -23,6 +23,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("envar", function (varname) {
     return process.env[varname];
   });
+  eleventyConfig.addShortcode("dumpToConsole", function(somevar){
+    console.dir(somevar);
+    return "";
+  });
 
   // eleventy watch files needs this in WSL
   eleventyConfig.setChokidarConfig({
