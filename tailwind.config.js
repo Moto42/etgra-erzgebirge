@@ -9,6 +9,13 @@ module.exports = {
         'sans': [...defaultTheme.fontFamily.sans],
         'headers': [...defaultTheme.fontFamily.sans],
       },
+      colors:{
+        txinfomedia: {
+          bg: {
+            footer: "#86B0C1",
+          },
+        }
+      },
     },
   },
   plugins: [],
