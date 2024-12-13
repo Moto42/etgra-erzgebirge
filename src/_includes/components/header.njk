@@ -1,3 +1,11 @@
 <header class="text-center bg-slate-300 w-full">
-    Header
+    <img src="{{headerfooter.logo}}" alt="Texas Infomedia Logo">
+    <nav class="">
+        {% for page in collections.contentpages %}
+            {%dumpToConsole page.data%}
+            {{page.data.title}}
+        {% endfor %}
+    </nav>
+    <div class=""> <a class="" href="/contact">Start Your Project</a> </div>
+    <div class=""> <a class="" href="tel://{{contactinfo.phone}}"> {{contactinfo.phone}}</a> </div>
 </header>
