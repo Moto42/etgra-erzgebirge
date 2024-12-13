@@ -1,12 +1,14 @@
-<header class="text-center w-full bg-headerpattern">
-   <img src="{{headerfooter.logo}}" alt="Texas Infomedia Logo">
-    <nav class="">
-        {% for page in collections.contentpages %}
-            <a href="{{page.data.page.url}}" class="">
-                {{page.data.title}}
-            </a>
-        {% endfor %}
-    </nav>
+<header class="text-center w-full bg-headerpattern flex justify-between">
+  <img src="{{headerfooter.logo}}" alt="Texas Infomedia Logo">
+  <nav class="">
+    {% for page in collections.contentpages %}
+      <a href="{{page.data.page.url}}" class="">
+        {{page.data.title}}
+      </a>
+    {% endfor %}
+  </nav>
+  <div class="">
     <div class=""> <a class="" href="/contact">Start Your Project</a> </div>
     <div class=""> <a class="" href="tel://{{contactinfo.phone}}"> {{contactinfo.phone}}</a> </div>
+  </div>
 </header>
