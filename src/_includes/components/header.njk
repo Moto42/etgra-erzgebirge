@@ -1,9 +1,9 @@
-<header class="text-center bg-slate-300 w-full">
-    <img src="{{headerfooter.logo}}" alt="Texas Infomedia Logo">
+<header class="text-center w-full bg-[linear-gradient(-4deg,_rgb(159,_173,_173),_rgb(159,_173,_173)_60%,_rgb(145,_152,_152)_60%_)]">
+   <img src="{{headerfooter.logo}}" alt="Texas Infomedia Logo">
     <nav class="">
         {% for page in collections.contentpages %}
             <a href="{{page.data.page.url}}" class="">
-            {{page.data.title}}
+                {{page.data.title}}
             </a>
         {% endfor %}
     </nav>
