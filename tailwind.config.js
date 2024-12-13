@@ -12,7 +12,7 @@ module.exports = {
       colors:{
         txinfomedia: {
           bg: {
-            footer: "#86B0C1",
+            standout: "#86B0C1",
           },
         }
       },
