@@ -1,0 +1,19 @@
+{# todo: #2 Get a good header font from google fonts #}
+<header class="text-center w-full bg-headerpattern flex justify-between px-4 gap-3 font-headers">
+  <img class="" src="{{headerfooter.logo}}" alt="Texas Infomedia Logo">
+  <nav class="flex grow justify-center items-end">
+    {% for page in collections.contentpages %}
+      <a href="{{page.data.page.url}}" class="text-2xl">
+        {{page.data.title}}
+      </a>
+    {% endfor %}
+  </nav>
+  <div class="flex">
+    <div class="bg-txinfomedia-bg-standout flex items-center whitespace-break-spaces">
+      <a class="p-2" href="/contact">Start Your<br/>Project</a>
+      </div>
+    <div class="p-2 flex items-center">
+      <a class="" href="tel://{{contactinfo.phone}}"> {{contactinfo.phone}}</a> 
+    </div>
+  </div>
+</header>

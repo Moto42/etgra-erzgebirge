@@ -5,7 +5,7 @@ layout: "layouts/1_base.njk"
 {# the "Holy grail" layout, # A header and footer, with a center section
 between, containing left and right # sidebars and a cetral content section. #}
 
-<header class="text-center bg-slate-300 w-full">Header</header>
+{% include "components/header.njk" %}
 <div class="flex flex-col md:flex-row grow w-full">
   {% if sidebar_left %}
   <aside class="text-center bg-slate-500 flex-none md:w-60">
@@ -23,4 +23,4 @@ between, containing left and right # sidebars and a cetral content section. #}
   </aside>
   {% endif %}
 </div>
-<footer class="text-center bg-slate-300 w-full">Footer</footer>
+{% include "components/footer.njk" %}

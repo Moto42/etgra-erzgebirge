@@ -5,7 +5,7 @@ module.exports = function (eleventyConfig) {
   dotenv.config();
 
   // while in --serve, do not copy passthroughcopy'ed files, serve them directly.
-  eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+  // eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
 
   // src/_static is just copied directly to the root of the site.
   eleventyConfig.ignores.add("src/_static/");
@@ -22,6 +22,10 @@ module.exports = function (eleventyConfig) {
   // get the value of a variable in process.env[varname]
   eleventyConfig.addShortcode("envar", function (varname) {
     return process.env[varname];
+  });
+  eleventyConfig.addShortcode("dumpToConsole", function(somevar){
+    console.dir(somevar);
+    return "";
   });
 
   // eleventy watch files needs this in WSL
