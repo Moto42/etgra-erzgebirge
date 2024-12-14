@@ -17,7 +17,7 @@ collections:
     files: 
       - label: Front page
         name: frontpage
-        file: /src/index.md
+        file: /src/index.11tydata.json
         editor:
           preview: false
         fields:
@@ -29,7 +29,7 @@ collections:
             choose_url: false
             media_folder: frontpage
           - label: Body
-            name: body
+            name: content
             widget: markdown
             hint: ""
       
