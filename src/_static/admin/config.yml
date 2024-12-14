@@ -12,6 +12,27 @@ media_folder: "src/_static/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
+  - label: "Primary Pages"
+    name: "primarypages"
+    files: 
+      - label: Front page
+        name: frontpage
+        file: /src/index.md
+        editor:
+          preview: false
+        fields:
+          - label: "Hero image"
+            name: "heroimage"
+            widget: "image"
+            hint: Large banner image which appears at the top of the page.
+            allow_multiple: false
+            choose_url: false
+            media_folder: frontpage
+          - label: Body
+            name: body
+            widget: markdown
+            hint: ""
+      
   - label: "Content Pages"
     name: contentpages
     folder: "src/pages"
