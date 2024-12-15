@@ -27,6 +27,13 @@ module.exports = function (eleventyConfig) {
     console.dir(somevar);
     return "";
   });
+  /**
+   * Convert a multiline string to a single line
+   */
+  eleventyConfig.addPairedShortcode("oneline", function(value) {
+    value = value.replaceAll(/\n+(\s+)?|\t+|\s+/g,' ');
+    return value;
+  });
 
   // eleventy watch files needs this in WSL
   eleventyConfig.setChokidarConfig({
