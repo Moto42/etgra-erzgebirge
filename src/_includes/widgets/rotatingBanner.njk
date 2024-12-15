@@ -8,10 +8,12 @@
     }
  #}
 {% macro rotatingBanner(bannersArray) %}
-    <div class="h-40 relative">
+    <div class="h-60 relative">
         {% for banner in bannersArray %}
             <div 
-                class="bg-cover h-full w-full absolute right-0 left-0 " 
+                class="{%oneline-%}
+                    bg-cover h-full w-full absolute right-0 left-0
+                {%-endoneline%}" 
                 style="background-image:url('{{banner.image}}')"
             >
                 {{banner.statement}}
