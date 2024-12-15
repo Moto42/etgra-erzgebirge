@@ -1,5 +1,11 @@
 {
   "title": "Texas Infomedia",
   "heroimage": "frontpage/hmthr.jpg",
-  "content": "asdfadsfad"
+  "content": "At Texas Infomedia, we are definitly human.\n\nClaims that we are reptilian infiltrators are filthy mammal lies.",
+  "herobanner": [
+    {
+      "image": "frontpage/hmthr.jpg",
+      "statement": "Luxury In Home Theatres"
+    }
+  ]
 }
