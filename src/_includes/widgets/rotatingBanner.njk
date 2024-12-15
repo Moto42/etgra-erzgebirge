@@ -8,11 +8,16 @@
     }
  #}
 {% macro rotatingBanner(bannersArray) %}
-    <div class="h-60 relative">
+    <div 
+        class="h-60 relative" 
+        x-data="{currentslide:1}"
+        x-init="$interval(()=>currentslide == 2 ? currentslide=1 : currentslide+=1,2000 )"
+    >
         {% for banner in bannersArray %}
             <div {%oneline-%}
+                x-show="currentslide=={{loop.index}}"
                 class="
-                    absolute first:right-0 right-full
+                    absolute right-0
                     bg-cover h-full w-full
                     flex items-center
                 " 
