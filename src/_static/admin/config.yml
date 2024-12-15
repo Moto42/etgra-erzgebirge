@@ -31,7 +31,8 @@ collections:
                 widget: image    
                 allow_multiple: false
                 choose_url: false
-                media_folder: frontpage
+                media_folder: /src/_static/images/uploads/frontpage
+                public_folder: /images/uploads/frontpage
                 hint: A banner image.
               - label: Statement
                 name: statement
