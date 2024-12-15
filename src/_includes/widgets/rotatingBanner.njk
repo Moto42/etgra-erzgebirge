@@ -10,12 +10,13 @@
 {% macro rotatingBanner(bannersArray) %}
     <div class="h-60 relative">
         {% for banner in bannersArray %}
-            <div 
-                class="{%oneline-%}
+            <div {%oneline-%}
+                class="
                     bg-cover h-full w-full absolute right-0 left-0
-                {%-endoneline%}" 
+                    flex items-center
+                " 
                 style="background-image:url('{{banner.image}}')"
-            >
+            >{%-endoneline%}
                 {{banner.statement}}
             </div>
         {% endfor %}
