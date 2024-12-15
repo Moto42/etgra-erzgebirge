@@ -1,0 +1,21 @@
+{# A hero banner for the front page featuring a rotating set of images, 
+    each with their own text.
+
+    Accepts as its arg an array of banner objects with the shape...
+    {
+        image: string/url/to.img
+        statement: "String to display over image."
+    }
+ #}
+{% macro rotatingBanner(bannersArray) %}
+    <div class="h-40 relative">
+        {% for banner in bannersArray %}
+            <div 
+                class="bg-cover h-full w-full absolute right-0 left-0 " 
+                style="background-image:url('{{banner.image}}')"
+            >
+                {{banner.statement}}
+            </div>
+        {% endfor %}
+    </div>
+{% endmacro %}

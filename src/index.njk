@@ -1,2 +1,5 @@
+{# Template for the homepage, pulls data from index.11tydata.json #}
 
-Content will go here.
+{%from "widgets/rotatingBanner.njk" import rotatingBanner%}
+
+{{rotatingBanner(herobanner)}}
