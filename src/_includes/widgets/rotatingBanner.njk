@@ -11,7 +11,7 @@
     <div 
         class="h-60 relative" 
         x-data="{currentslide:1}"
-        x-init="$interval(()=>currentslide == 2 ? currentslide=1 : currentslide+=1,2000 )"
+        x-init="$interval(()=>currentslide == {{bannersArray.length}} ? currentslide=1 : currentslide+=1,2000 )"
     >
         {% for banner in bannersArray %}
             <div {%oneline-%}
