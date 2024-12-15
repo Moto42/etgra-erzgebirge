@@ -12,7 +12,8 @@
         {% for banner in bannersArray %}
             <div {%oneline-%}
                 class="
-                    bg-cover h-full w-full absolute right-0 left-0
+                    absolute first:right-0 right-full
+                    bg-cover h-full w-full
                     flex items-center
                 " 
                 style="background-image:url('{{banner.image}}')"
