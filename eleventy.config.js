@@ -31,7 +31,7 @@ module.exports = function (eleventyConfig) {
    * Convert a multiline string to a single line
    */
   eleventyConfig.addPairedShortcode("oneline", function(value) {
-    value = value.replaceAll(/\n+(\s+)?|\t+|\s+/g,' ');
+    value = value.replaceAll(/\s+/g,' ');
     return value;
   });
 
