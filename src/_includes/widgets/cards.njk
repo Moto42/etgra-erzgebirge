@@ -5,11 +5,15 @@
     - blurb: string, longer text to appear on the card body
     - icon: string, img url, url to image to display on card
     - link: string, url, optional, url this card should link too.
+    - imgattr: string, url, optional, image attribution
  #}
-{% macro horizontalCard(headline,blurb,icon,link) %}
+{% macro horizontalCard(headline,blurb,icon,link,imgattr) %}
     {% if link %}<a href="{{link}}">{% endif %}
-    <div class="grid grid-cols-[auto_auto] max-w-[60ch] gap-1 text-left">
-        <div class="col-span-2 font-bold border-b border-solid border-black">
+    <div class="grid grid-cols-[auto_auto] max-w-[45ch] gap-1 text-left">
+        {{oneline-}}
+        <div class="col-span-2 border-b border-solid border-black
+        font-bold text-lg"
+        >{{endonline}}
             {{headline}}
         </div>
         <div class="">{{blurb}}</div>
