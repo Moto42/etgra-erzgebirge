@@ -13,7 +13,13 @@
             {{headline}}
         </div>
         <div class="">{{blurb}}</div>
-        <img src="{{icon}}" alt="">
+        {{oneline-}}
+        <img 
+            class="w-28"
+            src="{{icon}}"
+            alt=""
+            {%if imgattr%} attributionsrc={{imgattr}}{%endif%}
+        >{{endonline}}
     </div>
     {% if link %}</a>{% endif %}
 {% endmacro %}
