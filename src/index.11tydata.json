@@ -11,5 +11,14 @@
       "image": "/images/uploads/frontpage/eqprck.jpg",
       "statement": "equipment rack"
     }
+  ],
+  "featurecards": [
+    {
+      "headline": "Feature Card",
+      "blurb": "Feature cards are little cards meant to highlight a specific feature or service",
+      "link": "/residential",
+      "icon": "/images/uploads/frontpage/cards/vecteezy_goat-head-logo-icon_46894038.jpg",
+      "imgattr": "https://www.vecteezy.com/free-vector/agriculture"
+    }
   ]
 }
