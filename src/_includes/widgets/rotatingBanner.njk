@@ -16,10 +16,10 @@
         {% for banner in bannersArray %}
             <div {%oneline-%}
                 x-show="currentslide=={{loop.index}}"
-                x-transition:enter="transition-[left] ease-out duration-700"
+                x-transition:enter="transition-[left] ease-in-out duration-1000"
                 x-transition:enter-start="left-[100%]"
                 x-transition:enter-end="left-[0%]"
-                x-transition:leave="transition-[left] ease-out duration-700"
+                x-transition:leave="transition-[left] ease-in-out duration-1000"
                 x-transition:leave-start="left-[0%]"
                 x-transition:leave-end="left-[-100%]"
                 class="
