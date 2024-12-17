@@ -7,13 +7,16 @@
     - link: string, url, optional, url this card should link too.
  #}
 {% macro horizontalCard(headline,blurb,icon,link) %}
+    {% if link %}<a href="{{link}}">{% endif %}
+    {{oneline-}}
     <div class="grid grid-cols-[auto_auto] max-w-[60ch] gap-2
         text-left
         outline-dotted outline-2 outline-pink-700 
         *:outline-dotted *:outline-2 *:outline-fuchsia-700
-    ">
+    ">{{endoneline}}
         <div class="col-span-2 font-bold">{{headline}}</div>
         <div class="">{{blurb}}</div>
         <img src="{{icon}}" alt="">
     </div>
+    {% if link %}</a>{% endif %}
 {% endmacro %}
