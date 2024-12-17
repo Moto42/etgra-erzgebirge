@@ -9,7 +9,7 @@
  #}
 {% macro rotatingBanner(bannersArray) %}
     <div 
-        class="h-60 relative" 
+        class="h-60 relative overflow-hidden" 
         x-data="{currentslide:1}"
         x-init="$interval(()=>currentslide == {{bannersArray.length}} ? currentslide=1 : currentslide+=1,2000 )"
     >
