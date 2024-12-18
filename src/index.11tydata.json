@@ -5,11 +5,15 @@
   "herobanner": [
     {
       "image": "/images/uploads/frontpage/hmthr.jpg",
-      "statement": "stuffnthings"
+      "statement": "Luxury Home Theater"
     },
     {
       "image": "/images/uploads/frontpage/eqprck.jpg",
-      "statement": "equipment rack"
+      "statement": "Commercial and Home Networking"
+    },
+    {
+      "statement": "New Construciton",
+      "image": "/images/uploads/frontpage/types-of-new-construction-homes-1-1024x655.jpg"
     }
   ],
   "featurecards": [
@@ -19,6 +23,11 @@
       "link": "/residential",
       "icon": "/images/uploads/frontpage/cards/vecteezy_goat-head-logo-icon_46894038.jpg",
       "imgattr": "https://www.vecteezy.com/free-vector/agriculture"
+    },
+    {
+      "headline": "We Will Drop You",
+      "blurb": "Flat Rate drops in all 56 states.",
+      "icon": "/images/uploads/frontpage/cards/2753315.webp"
     }
   ]
 }
