@@ -8,6 +8,11 @@
       "source": "${devcontainerId}_node_modules",
       "target": "${containerWorkspaceFolder}/node_modules",
       "type": "volume"
+    },
+    {
+      "source": "${devcontainerId}_site",
+      "target": "${containerWorkspaceFolder}/_site",
+      "type": "volume"
     }
   ],
   "customizations": {
