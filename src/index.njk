@@ -1,5 +1,12 @@
 {# Template for the homepage, pulls data from index.11tydata.json #}
 
 {%from "widgets/banners.njk" import rotatingBanner%}
+{%from "widgets/cards.njk" import horizontalCard%}
 
 {{rotatingBanner(herobanner)}}
+
+<div class="">
+    {% for card in featurecards %}
+        {{horizontalCard(card.headline,card.blurb,card.icon,card.link,card.imgattr)}}
+    {% endfor %}
+</div>
