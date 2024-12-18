@@ -5,7 +5,7 @@
 
 {{rotatingBanner(herobanner)}}
 
-<div class="flex justify-center">
+<div class="flex justify-center gap-4">
     {% for card in featurecards %}
         {{horizontalCard(card.headline,card.blurb,card.icon,card.link,card.imgattr)}}
     {% endfor %}
