@@ -1,7 +1,7 @@
 {
   "title": "Texas Infomedia",
   "heroimage": "frontpage/hmthr.jpg",
-  "content": "At Texas Infomedia, we are definitly human.\n\nClaims that we are reptilian infiltrators are filthy mammal lies.",
+  "content": "## Heading 2\n\nAt Texas Infomedia, we are definitly human.\n\nClaims that we are reptilian infiltrators are filthy mammal lies.\n\n### Heading 3\n\n**I am bold** I am *Italisized* \n\n[I am a link](https://google.com)!\n\n#### Heading 4\n\n* list\n* the\n* things\n* make\n* the\n* list\n* long\n* no\n* longer\n\n## Images\n\nImages in a paragraph should look good. \n\n![hrose](/images/uploads/hrose.jpg)\n\nI am some other info, don't mind me just here for testing porpoises. We are trying to get them to steal things from scuba divers. Pictured: A very sick porpoise.\n\n## Image In a heading\n\n![severack](/images/uploads/eqprck.jpg)\n\nImage immedietly preceading should become mini-hero images.\n\nWe should probreak this into sections.",
   "herobanner": [
     {
       "image": "/images/uploads/frontpage/hmthr.jpg",
