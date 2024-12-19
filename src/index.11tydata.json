@@ -5,29 +5,14 @@
   "herobanner": [
     {
       "image": "/images/uploads/frontpage/hmthr.jpg",
-      "statement": "Luxury Home Theater"
-    },
-    {
-      "image": "/images/uploads/frontpage/eqprck.jpg",
-      "statement": "Commercial and Home Networking"
-    },
-    {
-      "statement": "New Construciton",
-      "image": "/images/uploads/frontpage/types-of-new-construction-homes-1-1024x655.jpg"
+      "statement": "Luxury Home Theaters"
     }
   ],
   "featurecards": [
     {
-      "headline": "Feature Card",
-      "blurb": "Feature cards are little cards meant to highlight a specific feature or service",
-      "link": "/residential",
-      "icon": "/images/uploads/frontpage/cards/vecteezy_goat-head-logo-icon_46894038.jpg",
-      "imgattr": "https://www.vecteezy.com/free-vector/agriculture"
-    },
-    {
-      "headline": "We Will Drop You",
-      "blurb": "Flat Rate drops in all 56 states.",
-      "icon": "/images/uploads/frontpage/cards/2753315.webp"
+      "headline": "Under Construction",
+      "blurb": "A clean new look, and streamlined experience is coming to TexasInfomedia.com.",
+      "icon": "/images/uploads/frontpage/cards/coming-soon-icon.svg"
     }
   ]
 }
