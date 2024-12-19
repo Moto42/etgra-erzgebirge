@@ -26,6 +26,10 @@ collections:
             widget: "list"
             hint: A rotating set of images and statements appearing at the top of the page.
             fields:
+              - label: Statement
+                name: statement
+                widget: string
+                hint: The statement to appear next to this banner
               - label: Banner
                 name: image
                 widget: image    
@@ -34,10 +38,6 @@ collections:
                 media_folder: /src/_static/images/uploads/frontpage
                 public_folder: /images/uploads/frontpage
                 hint: A banner image.
-              - label: Statement
-                name: statement
-                widget: string
-                hint: The statement to appear next to this banner
           - label: "Feature Cards"
             name: featurecards
             hint: "Cards with a horizontal layout, to callout features and services"
@@ -74,7 +74,6 @@ collections:
             name: content
             widget: markdown
             hint: ""
-      
   - label: "Content Pages"
     name: contentpages
     folder: "src/pages"
