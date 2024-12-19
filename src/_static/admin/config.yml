@@ -1,6 +1,6 @@
 local_backend: true
 backend:
-github
+# github
   name: github
   repo: "moto42/etgra-erzgebirge" 
   branch: main
