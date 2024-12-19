@@ -6,11 +6,15 @@
     {
       "image": "/images/uploads/frontpage/hmthr.jpg",
       "statement": "Luxury Home Theaters"
+    },
+    {
+      "statement": "Flat Rate Drops",
+      "image": "/images/uploads/frontpage/eqprck.jpg"
     }
   ],
   "featurecards": [
     {
-      "headline": "Under Construction",
+      "headline": "We Are Remodeling",
       "blurb": "A clean new look, and streamlined experience is coming to TexasInfomedia.com.",
       "icon": "/images/uploads/frontpage/cards/coming-soon-icon.svg"
     }
