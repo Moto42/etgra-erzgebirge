@@ -6,7 +6,9 @@
     arbitrary variants to to this. 
     https://tailwindcss.com/docs/hover-focus-and-other-states#using-arbitrary-variants  
     That is what the `[&_*] stuff is.  
-    This also means the class is going to get a bit large and complex at times.
+    This also means the class is going to get a bit large and complex at times.  
+    Nunucks comments inside the `class="..."` declaration are correctly stripped
+    from the final output.
  #}
 {% macro styledMarkdown(content) %}
 <div {{oneline-}} 
