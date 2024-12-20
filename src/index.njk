@@ -1,7 +1,8 @@
 {# Template for the homepage, pulls data from index.11tydata.json #}
 
-{%from "widgets/banners.njk" import rotatingBanner%}
-{%from "widgets/cards.njk" import horizontalCard%}
+{% from "widgets/banners.njk" import rotatingBanner %}
+{% from "widgets/cards.njk" import horizontalCard %}
+{% from "widgets/text.njk" import styledMarkdown %}
 
 {{rotatingBanner(herobanner)}}
 
