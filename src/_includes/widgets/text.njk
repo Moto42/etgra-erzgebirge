@@ -5,18 +5,14 @@
     This containers job is to style *its children*, we are using tailwind
     arbitrary variants to to this. 
     https://tailwindcss.com/docs/hover-focus-and-other-states#using-arbitrary-variants  
-    That is what the `[&_*] stuff is.  
+    That is what the `[&_*]:` stuff is.  
     This also means the class is going to get a bit large and complex at times.  
     Nunucks comments inside the `class="..."` declaration are correctly stripped
     from the final output.
  #}
 {% macro styledMarkdown(content) %}
 <div {{oneline-}} 
-    class="
-        text-left
-        {# images [&_img] #}
-        [&_img]:max-w-60
-    "
+    class="prose"
 {{-endoneline}}>
     {{content | parseMarkdown | safe}}
 </div>
