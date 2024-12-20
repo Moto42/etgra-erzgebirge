@@ -1,9 +1,20 @@
 {# The standard style for body content included via markdown 
 
     - content: markdown string
+
+    This containers job is to style *its children*, we are using tailwind
+    arbitrary variants to to this. 
+    https://tailwindcss.com/docs/hover-focus-and-other-states#using-arbitrary-variants  
+    That is what the `[&_*] stuff is.  
+    This also means the class is going to get a bit large and complex at times.
  #}
 {% macro styledMarkdown(content) %}
-<div class="">
+<div {{oneline-}} 
+    class="
+        {# images [&_img] #}
+        [&_img]:max-w-60
+    "
+{{-endoneline}}>
     {{content | parseMarkdown | safe}}
 </div>
 {% endmacro %}
