@@ -6,7 +6,10 @@
 {% macro styledMarkdown(content) %}
 <div {{oneline-}} 
     class="prose
-        prose-img:max-w-52
+
+        prose-img:max-w-52 prose-img:float-right prose-img:clear-both
+        prose-img:my-2 has-[img]:prose-p:clear-both
+        prose-headings:clear-both
     "
 {{-endoneline}}>
     {{content | parseMarkdown | safe}}
