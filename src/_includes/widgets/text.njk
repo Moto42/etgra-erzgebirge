@@ -1,0 +1,5 @@
+{% macro styledMarkdown(content) %}
+<div class="">
+    {{content | parseMarkdown | safe}}
+</div>
+{% endmacro %}
