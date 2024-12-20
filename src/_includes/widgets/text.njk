@@ -5,7 +5,9 @@
  #}
 {% macro styledMarkdown(content) %}
 <div {{oneline-}} 
-    class="prose"
+    class="prose
+        prose-img:max-w-52
+    "
 {{-endoneline}}>
     {{content | parseMarkdown | safe}}
 </div>
