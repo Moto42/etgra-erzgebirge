@@ -1,3 +1,7 @@
+{# The standard style for body content included via markdown 
+
+    - content: markdown string
+ #}
 {% macro styledMarkdown(content) %}
 <div class="">
     {{content | parseMarkdown | safe}}
