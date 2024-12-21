@@ -1,0 +1,38 @@
+{# A hero banner for the front page featuring a rotating set of images, 
+    each with their own text.
+
+    Accepts as its arg an array of banner objects with the shape...
+    {
+        image: string/url/to.img
+        statement: "String to display over image."
+    }
+ #}
+{% macro rotatingBanner(bannersArray) %}
+    <div 
+        class="h-60 relative overflow-hidden" 
+        x-data="{currentslide:1}"
+        x-init="$interval(()=>currentslide == {{bannersArray.length}} ? currentslide=1 : currentslide+=1,5000 )"
+    >
+        {% for banner in bannersArray %}
+            <div {%oneline-%}
+                x-show="currentslide=={{loop.index}}"
+                x-transition:enter="transition-[left] ease-in-out duration-1000"
+                x-transition:enter-start="left-[100%]"
+                x-transition:enter-end="left-[0%]"
+                x-transition:leave="transition-[left] ease-in-out duration-1000"
+                x-transition:leave-start="left-[0%]"
+                x-transition:leave-end="left-[-100%]"
+                class="
+                    absolute 
+                    bg-cover h-full w-full
+                    flex items-center
+                " 
+                style="background-image:url('{{banner.image}}')"
+            >{%-endoneline%}
+                <div class="text-white pl-10 text-5xl">
+                    {{banner.statement}}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endmacro %}

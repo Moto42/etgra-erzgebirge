@@ -1,5 +1,6 @@
 {
   "emmet.includeLanguages": {
     "nunjucks": "html"
-  }
+  },
+  "alpine-intellisense.settings.languageScopes": "html,nunjucks"
 }

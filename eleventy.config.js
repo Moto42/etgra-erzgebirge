@@ -1,4 +1,5 @@
 const dotenv = require("dotenv");
+const markdownit = require('markdown-it');
 
 // For passthroughcopy config, see https://www.11ty.dev/docs/copy/
 module.exports = function (eleventyConfig) {
@@ -10,6 +11,11 @@ module.exports = function (eleventyConfig) {
   // src/_static is just copied directly to the root of the site.
   eleventyConfig.ignores.add("src/_static/");
   eleventyConfig.addPassthroughCopy({ "src/_static/": "/" });
+
+  eleventyConfig.addFilter("parseMarkdown", function(content){
+    const md = markdownit();
+    return md.render(content);
+  });
 
   // TODO: #6 Document the shortcodes in the readme
   // Adding my own utility shortcodes
@@ -26,6 +32,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("dumpToConsole", function(somevar){
     console.dir(somevar);
     return "";
+  });
+  /**
+   * Convert a multiline string to a single line
+   */
+  eleventyConfig.addPairedShortcode("oneline", function(value) {
+    value = value.replaceAll(/\s+/g,' ');
+    return value;
   });
 
   // eleventy watch files needs this in WSL

@@ -1,6 +1,6 @@
 local_backend: true
 backend:
-#github
+# github
   name: github
   repo: "moto42/etgra-erzgebirge" 
   branch: main
@@ -21,18 +21,59 @@ collections:
         editor:
           preview: false
         fields:
-          - label: "Hero image"
-            name: "heroimage"
-            widget: "image"
-            hint: Large banner image which appears at the top of the page.
-            allow_multiple: false
-            choose_url: false
-            media_folder: frontpage
+          - label: "Hero Banner"
+            name: "herobanner"
+            widget: "list"
+            hint: A rotating set of images and statements appearing at the top of the page.
+            fields:
+              - label: Statement
+                name: statement
+                widget: string
+                hint: The statement to appear next to this banner
+              - label: Banner
+                name: image
+                widget: image    
+                allow_multiple: false
+                choose_url: false
+                media_folder: /src/_static/images/uploads/frontpage
+                public_folder: /images/uploads/frontpage
+                hint: A banner image.
+          - label: "Feature Cards"
+            name: featurecards
+            hint: "Cards with a horizontal layout, to callout features and services"
+            widget: list
+            fields:
+              - label: Headline
+                name: headline
+                widget: string
+                hint: Headline to appear at top of card
+              - label: Body text
+                name: blurb
+                widget: string
+                hint: The text to appear in the body of the card.
+              - lable: Link
+                name: link
+                widget: string
+                required: false
+                hint: optional URL that this card should link too.
+              - label: Icon
+                name: icon
+                widget: image
+                allow_multiple: false
+                choose_url: false
+                media_folder: /src/_static/images/uploads/frontpage/cards
+                public_folder: /images/uploads/frontpage/cards
+                hint: Icon that will apear on this card.
+              - label: Image Attribution
+                name: imgattr
+                widget: string
+                required: false
+                hint: url to image attribution, if required.
+                pattern: ["^https?://", "Please enter a url beginnign with 'http(s)://"]    
           - label: Body
             name: content
             widget: markdown
             hint: ""
-      
   - label: "Content Pages"
     name: contentpages
     folder: "src/pages"

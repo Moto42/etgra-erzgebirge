@@ -12,6 +12,8 @@ module.exports = {
       colors:{
         txinfomedia: {
           bg: {
+            main: 'rgba(148, 163, 184, 1)',
+            aside: 'rgba(148, 163, 184, 1)',
             standout: "#86B0C1",
           },
         }
@@ -21,6 +23,8 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
 

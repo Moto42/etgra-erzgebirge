@@ -4,16 +4,16 @@ layout: "layouts/1_base.njk"
 {# Header Main Footer 
  # a super basic layout to start with.
  #}
-<header class="text-center bg-slate-300 w-full">
+<header class="bg-slate-300 w-full">
     Header
 </header>
-<main class="text-center grow bg-slate-400 w-full">
+<main class="grow bg-slate-400 w-full">
     {% if content %}
         {{ content | safe}}
     {% else %}
         <h1>Default content of 2_hmf</h1>
     {% endif %}
 </main>
-<footer class="text-center bg-slate-500 w-full">
+<footer class="bg-slate-500 w-full">
     Footer
 </footer>

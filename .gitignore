@@ -6,3 +6,4 @@ _site
 
 # OS Generated files that don't belong
 .DS_Store
+*.nokeep.*

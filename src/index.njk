@@ -1,2 +1,17 @@
+{# Template for the homepage, pulls data from index.11tydata.json #}
 
-Content will go here.
+{% from "widgets/banners.njk" import rotatingBanner %}
+{% from "widgets/cards.njk" import horizontalCard %}
+{% from "widgets/text.njk" import styledMarkdown %}
+
+{{rotatingBanner(herobanner)}}
+
+<div class="flex justify-center gap-4">
+    {% for card in featurecards %}
+        {{horizontalCard(card.headline,card.blurb,card.icon,card.link,card.imgattr)}}
+    {% endfor %}
+</div>
+
+<div class="max-w-3xl mx-auto">
+    {{styledMarkdown(content)}}
+</div>

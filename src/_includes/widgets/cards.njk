@@ -1,0 +1,29 @@
+{# A card featuring a headline, text blurb, and image/icon in a horozontal layout
+
+    args
+    - headline: string, headline to appear at top of card
+    - blurb: string, longer text to appear on the card body
+    - icon: string, img url, url to image to display on card
+    - link: string, url, optional, url this card should link too.
+    - imgattr: string, url, optional, image attribution
+ #}
+{% macro horizontalCard(headline,blurb,icon,link,imgattr) %}
+    {% if link %}<a href="{{link}}">{% endif %}
+    <div class="grid grid-cols-[auto_auto] max-w-[45ch] gap-1 text-left">
+        {{oneline-}}
+        <div class="col-span-2 border-b border-solid border-black
+        font-bold text-lg"
+        >{{endonline}}
+            {{headline}}
+        </div>
+        <div class="">{{blurb}}</div>
+        {{oneline-}}
+        <img 
+            class="w-20"
+            src="{{icon}}"
+            alt=""
+            {%if imgattr%} attributionsrc={{imgattr}}{%endif%}
+        >{{endonline}}
+    </div>
+    {% if link %}</a>{% endif %}
+{% endmacro %}
