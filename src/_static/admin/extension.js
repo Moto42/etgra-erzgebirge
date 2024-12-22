@@ -49,7 +49,7 @@ CMS.registerEditorComponent({
             choose_url: false,
         }
     ],
-    pattern: /{% widgets-banner "(h\d)" "(.*?)" "(.*?)" %}/m,
+    pattern: /{% widgets_banner "(h\d)" "(.*?)" "(.*?)" %}/m,
     fromBlock: function(match) {
         return {
             headline: match[2],
@@ -58,7 +58,7 @@ CMS.registerEditorComponent({
         };
     },
     toBlock: function(obj) {
-        return `{% widgets-banner "${obj.headinglevel}" "${obj.headline}" "${obj.image}" %}`;
+        return `{% widgets_banner "${obj.headinglevel}" "${obj.headline}" "${obj.image}" %}`;
     },
     toPreview: function(obj) {
         return `<div class="banner-preview"><h1>${obj.headline}</h1><img src="${obj.image}" alt="${obj.headline}" /></div>`;
