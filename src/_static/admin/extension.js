@@ -4,6 +4,12 @@ CMS.registerEditorComponent({
     id: 'widget_banner',
     label: 'Banner Image',
     fields: [
+        
+        {
+            label: 'Headline',
+            name: 'headline',
+            widget: 'string'
+        },
         {
             label: 'Heading Level',
             name: 'headinglevel',
@@ -36,11 +42,6 @@ CMS.registerEditorComponent({
             ]
         },
         {
-            label: 'Headline',
-            name: 'headline',
-            widget: 'string'
-        },
-        {
             label: 'Image',
             name: 'image',
             widget: 'image',
@@ -48,15 +49,17 @@ CMS.registerEditorComponent({
             choose_url: false,
         }
     ],
-    pattern: /{% widgets-banner (.*?) (.*?) %}/m,
+    pattern: /{% widgets-banner "(h\d)" "(.*?)" "(.*?)" %}/m,
     fromBlock: function(match) {
+        console.log(match);
         return {
-            headline: match[1],
-            image: match[2]
+            headline: match[2],
+            headinglevel: match[1],
+            image: match[3]
         };
     },
     toBlock: function(obj) {
-        return `{% widgets-Banner "${obj.headinglevel}" "${obj.headline}" "${obj.image}" %}`;
+        return `{% widgets-banner "${obj.headinglevel}" "${obj.headline}" "${obj.image}" %}`;
     },
     toPreview: function(obj) {
         return `<div class="banner-preview"><h1>${obj.headline}</h1><img src="${obj.image}" alt="${obj.headline}" /></div>`;
