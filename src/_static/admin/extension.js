@@ -51,7 +51,6 @@ CMS.registerEditorComponent({
     ],
     pattern: /{% widgets-banner "(h\d)" "(.*?)" "(.*?)" %}/m,
     fromBlock: function(match) {
-        console.log(match);
         return {
             headline: match[2],
             headinglevel: match[1],
