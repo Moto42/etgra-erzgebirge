@@ -16,6 +16,12 @@ module.exports = function (eleventyConfig) {
     const md = markdownit();
     return md.render(content);
   });
+  
+  const widgets_banner_divClasses = "h-96 text-white";
+  const widgets_banner_headingClasses = "w-full h-full bg-cover bg-center bg-no-repeat";
+  eleventyConfig.addShortcode("widgets_banner", function (headinglevel, headline, image) {
+    return `<div class="${widgets_banner_divClasses}"><${headinglevel} class="${widgets_banner_headingClasses}" style="background-image: url('${image}');">${headline}</${headinglevel}></div>`;
+  });
 
   // TODO: #6 Document the shortcodes in the readme
   // Adding my own utility shortcodes
