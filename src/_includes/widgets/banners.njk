@@ -27,9 +27,14 @@
                     bg-cover h-full w-full
                     flex items-center
                 " 
-                style="background-image:url('{{banner.image}}')"
             >{%-endoneline%}
-                <div class="text-white pl-10 text-5xl">
+                {%oneline-%}
+                <img
+                    class="w-full h-full object-cover absolute right-0 left-0 top-0 bottom-0 filter-bannerimg" 
+                    src="{{banner.image}}" 
+                    alt=""
+                {%-endoneline%}>
+                <div class="text-white pl-10 text-5xl z-10">
                     {{banner.statement}}
                 </div>
             </div>

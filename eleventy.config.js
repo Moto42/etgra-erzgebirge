@@ -21,15 +21,15 @@ module.exports = function (eleventyConfig) {
   });
 
   const hlvl2height = {
-    h1: "h-42",
-    h2: "h-36", 
-    h3: "h-24",
-    h4: "h-20",
-    h5: "h-16",
-    h6: "h-12",
+    h1: "h-36",
+    h2: "h-30", 
+    h3: "h-20",
+    h4: "h-16",
+    h5: "h-12",
+    h6: "h-8",
   }
   const widgets_banner_divClasses = headinglevel => `${hlvl2height[headinglevel]} p-4 flex items-end relative`;
-  const widgets_banner_imgclass = `w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat`;
+  const widgets_banner_imgclass = `w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat filter-bannerimg`;
   const widgets_banner_headingClasses = `w-full  text-white font-bold z-10`;
   eleventyConfig.addShortcode("widgets_banner", function (headinglevel, headline, image) {
     return `<div class="${widgets_banner_divClasses(headinglevel)}"><div class="${widgets_banner_imgclass}" style="background-image: url('${image}');">&nbsp;</div><${headinglevel} class="${widgets_banner_headingClasses}">${headline}</${headinglevel}></div>`;
