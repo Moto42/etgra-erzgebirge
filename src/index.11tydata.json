@@ -18,26 +18,5 @@
       "icon": "/images/uploads/frontpage/cards/coming-soon-icon.svg"
     }
   ],
-  "content": [
-    {
-      "type": "text",
-      "text": "This is test text that is being tested\n\nNew Paragraph"
-    },
-    {
-      "type": "banner",
-      "headinglevel": "h2",
-      "heading": "First banner",
-      "image": "/images/uploads/frontpage/banners/tvhang14.jpeg"
-    },
-    {
-      "type": "text",
-      "text": "More text, you love text right?"
-    },
-    {
-      "type": "banner",
-      "headinglevel": "h2",
-      "heading": "Final banner",
-      "image": "/images/uploads/frontpage/banners/outdoorspeaker1.jpeg"
-    }
-  ]
+  "content": []
 }
