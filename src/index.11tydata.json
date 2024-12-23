@@ -26,5 +26,20 @@
       "icon": "/images/uploads/frontpage/cards/coming-soon-icon.svg"
     }
   ],
-  "content": []
+  "content": [
+    {
+      "type": "text",
+      "text": "Texas Info Media is a world leader in commercial and residential electronics installation, Audio/Video integration, and luxury home theater design."
+    },
+    {
+      "type": "banner",
+      "headinglevel": "h2",
+      "heading": "Residential Services",
+      "image": "/images/uploads/frontpage/banners/tvhang8.jpeg"
+    },
+    {
+      "type": "text",
+      "text": "While Texas Info Media is known for designing and building luxury home theaters, our services extend far beyond.\n\n\n* Home Automation\n* Security System Installation\n* Satellite Internet and Television Services\n* Home Networking\n* Audio Video Integration"
+    }
+  ]
 }
