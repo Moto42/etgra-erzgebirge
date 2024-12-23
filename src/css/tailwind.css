@@ -9,3 +9,9 @@
     h3 { @apply text-xl }
 
 }
+
+@layer utilities {
+    .filter-bannerimg {
+        filter: brightness(0.5) contrast(1.2);
+    }
+}
