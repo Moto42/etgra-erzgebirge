@@ -51,6 +51,9 @@ module.exports = function (eleventyConfig) {
     console.dir(somevar);
     return "";
   });
+  eleventyConfig.addShortcode("random4Digit", function () {
+    return Math.floor(1000 + Math.random() * 9000);
+  });
   /**
    * Convert a multiline string to a single line
    */
