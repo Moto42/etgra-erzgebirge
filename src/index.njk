@@ -17,7 +17,7 @@
         {% if item.type == 'text' %}
             {{styledMarkdown(item.text)}}
         {% elseif item.type == 'banner' %}
-            {% widgets_banner item.headinglevel, item.text, item.image %}
+            {% widgets_banner item.headinglevel, item.heading, item.image %}
         {% endif %}
     {% endfor %}
 </div>
