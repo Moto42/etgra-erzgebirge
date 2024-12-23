@@ -1,9 +1,12 @@
 const dotenv = require("dotenv");
 const markdownit = require('markdown-it');
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
 
 // For passthroughcopy config, see https://www.11ty.dev/docs/copy/
 module.exports = function (eleventyConfig) {
   dotenv.config();
+
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
 
   // while in --serve, do not copy passthroughcopy'ed files, serve them directly.
   // eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
@@ -15,6 +18,21 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("parseMarkdown", function(content){
     const md = markdownit();
     return md.render(content);
+  });
+
+  const hlvl2height = {
+    h1: "h-42",
+    h2: "h-36", 
+    h3: "h-24",
+    h4: "h-20",
+    h5: "h-16",
+    h6: "h-12",
+  }
+  const widgets_banner_divClasses = headinglevel => `${hlvl2height[headinglevel]} p-4 flex items-end relative`;
+  const widgets_banner_imgclass = `w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat`;
+  const widgets_banner_headingClasses = `w-full  text-white font-bold z-10`;
+  eleventyConfig.addShortcode("widgets_banner", function (headinglevel, headline, image) {
+    return `<div class="${widgets_banner_divClasses(headinglevel)}"><div class="${widgets_banner_imgclass}" style="background-image: url('${image}');">&nbsp;</div><${headinglevel} class="${widgets_banner_headingClasses}">${headline}</${headinglevel}></div>`;
   });
 
   // TODO: #6 Document the shortcodes in the readme
