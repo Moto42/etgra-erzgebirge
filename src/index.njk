@@ -12,10 +12,12 @@
     {% endfor %}
 </div>
 
-{% for item in content %}
-    {% if item.type == 'text' %}
-        {{styledMarkdown(item.text)}}
-    {% elseif item.type == 'banner' %}
-        {% widgets_banner item.headinglevel, item.text, item.image %}
-    {% endif %}
-{% endfor %}
+<div class="mx-auto w-full max-w-3xl">
+    {% for item in content %}
+        {% if item.type == 'text' %}
+            {{styledMarkdown(item.text)}}
+        {% elseif item.type == 'banner' %}
+            {% widgets_banner item.headinglevel, item.text, item.image %}
+        {% endif %}
+    {% endfor %}
+</div>
