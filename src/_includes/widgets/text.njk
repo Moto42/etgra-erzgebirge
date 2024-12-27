@@ -24,7 +24,7 @@
         {% if item.type == 'text' %}
             {{styledMarkdown(item.text)}}
         {% elseif item.type == 'banner' %}
-            {{headingBanner(item.headinglevel, item.headline, item.image)}}
+            {{headingBanner(item.headinglevel, item.heading, item.image)}}
         {% endif %}
     {% endfor %}
 </div>
