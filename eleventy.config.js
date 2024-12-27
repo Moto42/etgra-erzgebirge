@@ -28,7 +28,7 @@ module.exports = function (eleventyConfig) {
     h5: "h-12",
     h6: "h-8",
   }
-  const widgets_banner_divClasses = headinglevel => `${hlvl2height[headinglevel]} p-4 flex items-end relative`;
+  const widgets_banner_divClasses = headinglevel => `${hlvl2height[headinglevel]} p-4 flex items-end relative mt-6 mb-4`;
   const widgets_banner_imgclass = `w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat filter-bannerimg`;
   const widgets_banner_headingClasses = `w-full  text-white font-bold z-10`;
   eleventyConfig.addShortcode("widgets_banner", function (headinglevel, headline, image) {
