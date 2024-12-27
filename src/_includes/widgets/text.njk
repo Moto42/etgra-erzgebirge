@@ -1,3 +1,5 @@
+{% from "widgets/banners.njk" import headingBanner %}
+
 {# The standard style for body content included via markdown 
 
     - content: markdown string
@@ -22,7 +24,7 @@
         {% if item.type == 'text' %}
             {{styledMarkdown(item.text)}}
         {% elseif item.type == 'banner' %}
-            {% widgets_banner item.headinglevel, item.heading, item.image %}
+            {{headingBanner(item.headinglevel, item.headline, item.image)}}
         {% endif %}
     {% endfor %}
 </div>
