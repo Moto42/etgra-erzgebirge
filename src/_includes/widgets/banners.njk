@@ -42,7 +42,7 @@
     </div>
 {% endmacro %}
 
-{% macro headingBanner(headinglevel, headline, image) %}
+{% macro headingBanner(headinglevel, heading, image) %}
     {% set heightClass = {
         'h1': 'h-36',
         'h2': 'h-32',
@@ -62,7 +62,7 @@
             src="{{image}}"
         />{%-endoneline%}
         <{{headinglevel}} class="w-full text-white font-bold z-10">
-            {{headline}}
+            {{heading}}
         </{{headinglevel}}>
     </div>
 {% endmacro %}
