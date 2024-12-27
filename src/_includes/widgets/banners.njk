@@ -42,6 +42,16 @@
     </div>
 {% endmacro %}
 
+{#
+    Macro: headingBanner
+    Description: Renders a banner with a heading and background image. The height of the banner is determined by the heading level.
+    Parameters:
+        - headinglevel (string): The level of the heading (e.g., 'h1', 'h2', etc.). Determines the height of the banner.
+        - heading (string): The text content of the heading.
+        - image (string): The URL of the background image for the banner.
+    Usage:
+        {{ headingBanner('h1', 'Welcome to Our Site', '/path/to/image.jpg') }}
+#}
 {% macro headingBanner(headinglevel, heading, image) %}
     {% set heightClass = {
         'h1': 'h-36',
