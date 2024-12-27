@@ -3,6 +3,7 @@
 {% from "widgets/banners.njk" import rotatingBanner %}
 {% from "widgets/cards.njk" import horizontalCard %}
 {% from "widgets/text.njk" import styledMarkdown %}
+{% from "widgets/text.njk" import renderContent %}
 
 {{rotatingBanner(herobanner)}}
 
@@ -12,12 +13,4 @@
     {% endfor %}
 </div>
 
-<div class="mx-auto w-full max-w-3xl">
-    {% for item in content %}
-        {% if item.type == 'text' %}
-            {{styledMarkdown(item.text)}}
-        {% elseif item.type == 'banner' %}
-            {% widgets_banner item.headinglevel, item.heading, item.image %}
-        {% endif %}
-    {% endfor %}
-</div>
+{{renderContent(content)}}
