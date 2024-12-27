@@ -22,7 +22,8 @@
         "esbenp.prettier-vscode",
         "guapibai.nunjucks-prettier",
         "bradlc.vscode-tailwindcss",
-        "GitHub.vscode-pull-request-github"
+        "GitHub.vscode-pull-request-github",
+        "pcbowers.alpine-intellisense"
       ]
     }
   },
