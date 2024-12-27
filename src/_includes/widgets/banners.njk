@@ -41,3 +41,25 @@
         {% endfor %}
     </div>
 {% endmacro %}
+
+{% macro headingBanner(headinglevel, headline, image) %}
+    {% set heights = {
+        'h1': 'h-36',
+        'h2': 'h-30',
+        'h3': 'h-20',
+        'h4': 'h-16',
+        'h5': 'h-12',
+        'h6': 'h-8'
+    } %}
+    <div {%oneline-%}
+        class="{{heights[headinglevel] or 'h-12'}} p-4 flex items-end relative mt-6 mb-4"
+    >{%-endoneline%}
+        <img {%oneline%}
+            class="w-full h-full object-cover absolute top-0 left-0 filter-bannerimg"
+            src="{{image}}"
+        />{%-endoneline%}
+        <{{headinglevel}} class="w-full text-white font-bold z-10">
+            {{headline}}
+        </{{headinglevel}}>
+    </div>
+{% endmacro %}
