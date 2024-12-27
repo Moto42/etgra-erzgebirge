@@ -1,3 +1,5 @@
+{% from "widgets/banners.njk" import headingBanner %}
+
 {# The standard style for body content included via markdown 
 
     - content: markdown string
@@ -16,15 +18,33 @@
 </div>
 {% endmacro %}
 
+
+{# 
+    Renders a list of content items, applying different styles and components based on the item type.
+
+    @param {Array} content - An array of content objects. Each object should have a `type` property that determines how it will be rendered.
+        - `type`: A string that can be either 'text' or 'banner'.
+        - `text`: A string of markdown content (required if type is 'text').
+        - `headinglevel`: An integer representing the heading level (required if type is 'banner').
+        - `heading`: A string for the banner heading (required if type is 'banner').
+        - `image`: A string URL for the banner image (optional if type is 'banner').
+
+    Example usage:
+    {% set content = [
+        { type: 'text', text: '# Hello World' },
+        { type: 'banner', headinglevel: 2, heading: 'Welcome', image: '/path/to/image.jpg' }
+    ] %}
+    {{ renderContent(content) }}
+#}
 {% macro renderContent(content) %}
-    <div class="mx-auto w-full max-w-3xl">
-    {% for item in content %}
-        {% if item.type == 'text' %}
-            {{styledMarkdown(item.text)}}
-        {% elseif item.type == 'banner' %}
-            {% widgets_banner item.headinglevel, item.heading, item.image %}
-        {% endif %}
-    {% endfor %}
+        <div class="mx-auto w-full max-w-3xl">
+        {% for item in content %}
+                {% if item.type == 'text' %}
+                        {{styledMarkdown(item.text)}}
+                {% elseif item.type == 'banner' %}
+                        {{headingBanner(item.headinglevel, item.heading, item.image)}}
+                {% endif %}
+        {% endfor %}
 </div>
 {% endmacro %}
 
