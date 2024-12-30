@@ -73,6 +73,7 @@ collections:
           - label: Body
             name: content
             widget: list
+            label_singular: "Section"
             hint: ""
             types: 
               - label: "Text"
@@ -142,6 +143,7 @@ collections:
         name: "content"
         required: true
         widget: list
+        label_singular: "Section"
         hint: ""
         types: 
           - label: "Text"
