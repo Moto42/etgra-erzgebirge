@@ -145,6 +145,7 @@ collections:
           - label: "Text"
             name: "text"
             widget: object
+            summary: "{{fields.text | truncate(40)}}"
             fields:
               - label: "Text"
                 name: "text"
@@ -167,6 +168,7 @@ collections:
           - label: "Banner"
             name: "banner"
             widget: object
+            summary: "{{fields.heading}}"
             fields:
               - label: "Heading"
                 name: "heading"
