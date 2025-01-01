@@ -3,7 +3,7 @@ headers. #}
 
 <!DOCTYPE html>
 {{oneline-}}
-<html class="bg-txinfomedia-bg-main"
+<html class="bg-txinfomedia-bg-farback"
   lang="en"
 >
 {{-endoneline}}
@@ -22,8 +22,13 @@ headers. #}
   </head>
   {{oneline-}}
   <body
-    class="flex flex-col items-center min-h-screen mx-auto
-    w-full max-w-7xl
+    class="
+      flex flex-col items-center 
+      min-h-screen mx-auto
+      w-full max-w-5xl
+      bg-txinfomedia-bg-main
+      shadow-lg
+      font-serif
     "
   >
     {{content | safe}}
