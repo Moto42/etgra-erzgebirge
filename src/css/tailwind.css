@@ -12,6 +12,6 @@
 
 @layer utilities {
     .filter-bannerimg {
-        filter: brightness(0.5) contrast(1.2);
+        filter: brightness(0.7) contrast(1.2);
     }
 }
