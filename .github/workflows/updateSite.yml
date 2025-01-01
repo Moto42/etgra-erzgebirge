@@ -37,8 +37,14 @@ jobs:
         with:
           path: ./_site
           key: site-content-
-      - name: verify content was pulled\nreplace me with actual work
-        run: cat ${{github.workspace}}/_site/index.html
+      - name: Upload Site Content
+        uses: anvil-solutions/Fast-FTP-Action@2.1.3
+        with:
+          server: ${{ secrets.FTP_SERVER_URL }}
+          username: ${{ secrets.FTP_USER_NAME }}
+          password: ${{ secrets.FPT_PASSWORD }}
+          local_dir: ${{github.workspace}}/_site
+          remote_dir: /public
           
 
       
