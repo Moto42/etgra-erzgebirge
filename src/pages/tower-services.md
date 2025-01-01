@@ -2,8 +2,11 @@
 title: Tower Services
 content:
   - type: text
-    text: >+
+    text: >-
       ## Safe, reliable tower installations
+
+
+      ![A man on a tall radio tower](/images/uploads/uphigh.jpg)
 
 
       Whether you are building a new tower, adding sections to an existing tower, or installing equipment; Texas Info Media has the experience to perform tower work safely, efficiently, and reliably.
@@ -14,19 +17,17 @@ content:
       Tower services we offer include, but are not limited to:
 
 
-      - New Tower Installation
+      * New Tower Installation
 
-      - Tower repairs
+      * Tower repairs
 
-      - Stabilizer and Guy Wire installation
+      * Stabilizer and Guy Wire installation
 
-      - Tower mounted equipment installation
+      * Tower mounted equipment installation
 
-      - Tower extension
+      * Tower extension
 
-      - Residential and Commercial installations
-
-
+      * Residential and Commercial installations
 tags:
   - contentpages
 ---

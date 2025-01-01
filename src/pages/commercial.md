@@ -59,8 +59,10 @@ content:
       Contact Texas Info Media to have the best possible AV experience made part of your conference room.
   - type: text
     text: >-
-      
-      ## Structured Cabling 
+      ## Structured Cabling
+
+
+      ![](/images/uploads/tidycables.jpg)
 
 
       Structured cabling is the digital plumbing for your business or home. The cabling upgrades the typical telephone or television cable access and allows for flexibility within the entire structure. In essence, wiring your network for today’s technology and tomorrow’s advancements in technology. This is great for both the home and commercial visual and audio systems.
@@ -75,25 +77,25 @@ content:
       ### Benefits of structured cabling:
 
 
-      - Improved Organization
+      * Improved Organization
 
-      - Better Scalability
+      * Better Scalability
 
-      - Enhanced Performance
+      * Enhanced Performance
 
-      - Cost Efficiency
+      * Cost Efficiency
 
-      - Faster Installation
+      * Faster Installation
 
-      - Reduced Downtime
+      * Reduced Downtime
 
-      - Improved Safety
+      * Improved Safety
 
-      - Easier Maintenance
+      * Easier Maintenance
 
-      - Improved Aesthetics
+      * Improved Aesthetics
 
-      - Less likely to trip and destroy an entire server rack
+      * Less likely to trip and destroy an entire server rack
 
 
       ### Server Room Rescue
