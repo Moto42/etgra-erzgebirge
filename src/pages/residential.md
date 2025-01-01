@@ -248,5 +248,3 @@ tags:
 
 {% from "widgets/text.njk" import renderContent %}
 {{renderContent(content)}}
-
-
