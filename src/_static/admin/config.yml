@@ -73,11 +73,13 @@ collections:
           - label: Body
             name: content
             widget: list
+            label_singular: "Section"
             hint: ""
             types: 
               - label: "Text"
                 name: "text"
                 widget: object
+                summary: "{{fields.text | truncate(40)}}"
                 fields:
                   - label: "Text"
                     name: "text"
@@ -100,6 +102,7 @@ collections:
               - label: "Banner"
                 name: "banner"
                 widget: object
+                summary: "{{fields.heading}}"
                 fields:
                   - label: "Heading"
                     name: "heading"
@@ -137,26 +140,63 @@ collections:
         widget: string
         required: true
       - label: "Content"
-        name: "body"
+        name: "content"
         required: true
-        widget: markdown
-        buttons: 
-          - bold
-          - italic
-          - code
-          - link
-          # - heading-one
-          - heading-two
-          - heading-three
-          - heading-four
-          - heading-five
-          - heading-six
-          - quote
-          - bulleted-list
-          - numbered-list
-        editor_components:
-          - image
-          # - code-block
+        widget: list
+        label_singular: "Section"
+        hint: ""
+        types: 
+          - label: "Text"
+            name: "text"
+            widget: object
+            summary: "{{fields.text | truncate(40)}}"
+            fields:
+              - label: "Text"
+                name: "text"
+                widget: markdown
+                buttons: 
+                  - bold
+                  - italic
+                  - code
+                  - link
+                  - heading-two
+                  - heading-three
+                  - heading-four
+                  - heading-five
+                  - heading-six
+                  - quote
+                  - bulleted-list
+                  - numbered-list
+                editor_components:
+                  - image
+          - label: "Banner"
+            name: "banner"
+            widget: object
+            summary: "{{fields.heading}}"
+            fields:
+              - label: "Heading"
+                name: "heading"
+                widget: string
+                hint: Heading to appear in the banner
+              - label: "Heading Level"
+                name: "headinglevel"
+                widget: select
+                options:
+                  - "h2"
+                  - "h3"
+                  - "h4"
+                  - "h5"
+                  - "h6"
+                default: "h2"
+                hint: The level of the heading to appear in the banner
+              - label: "Image"
+                name: "image"
+                widget: image
+                allow_multiple: false
+                choose_url: false
+                media_folder: /src/_static/images/uploads/contentpages/banners
+                public_folder: /images/uploads/contentpages/banners
+                hint: Image to appear in the banner
       - label: "Tags"
         name: "tags"
         widget: hidden
