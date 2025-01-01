@@ -8,11 +8,11 @@
 {% macro styledMarkdown(content) %}
 <div {{oneline-}} 
     class="
-        prose max-w-none
-        prose-img:max-w-52 prose-img:float-right prose-img:clear-both
-        prose-img:my-2 has-[img]:prose-p:clear-both
-        prose-headings:clear-both
-        prose-ul:grid prose-ul:grid-cols-[repeat(auto-fit,minmax(25ch,1fr))] prose-ul:gap-2 prose-ul:gap-y-0
+        prose max-w-none p-4
+        prose-img:max-w-52 prose-img:float-right prose-img:clear-both prose-img:my-4 prose-img:mx-4
+        prose-headings:clear-both prose-headings:font-bold prose-headings:text-txinfomedia-bg-headings
+        prose-ul:grid prose-ul:grid-cols-[repeat(auto-fit,minmax(25ch,1fr))] prose-ul:gap-4 prose-ul:gap-y-2
+        prose-p:leading-relaxed prose-p:text-lg font-semibold
     "
 {{-endoneline}}>
     {{content | parseMarkdown | safe}}
