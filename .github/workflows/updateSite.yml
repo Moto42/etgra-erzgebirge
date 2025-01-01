@@ -38,7 +38,7 @@ jobs:
           path: ./_site
           key: site-content-
       - name: cd to site content
-        run: cd ${{github.workspace}}/_site
+        run: cd ${{github.workspace}}/
       - name: verify cache content exists
         run: echo ${PWD}; ls 
         # run: cat ./index.html
