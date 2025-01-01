@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,7 +9,6 @@
     h1 { @apply text-3xl my-2 }
     h2 { @apply text-2xl my-2 }
     h3 { @apply text-xl }
-
 }
 
 @layer utilities {
