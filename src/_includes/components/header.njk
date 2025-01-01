@@ -2,7 +2,7 @@
   <a href="/">
     <img class="" src="{{headerfooter.logo}}" alt="Texas Infomedia Logo">
   </a>
-  <nav class="flex grow justify-center gap-6 outline items-center font-bold flex-wrap">
+  <nav class="flex grow justify-center gap-6 items-center font-bold flex-wrap text-lg  shadow-lg">
     {% for page in collections.contentpages %}
       <a href="{{page.data.page.url}}" class="text-2xl">
         {{page.data.title}}
