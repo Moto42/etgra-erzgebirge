@@ -53,6 +53,17 @@ module.exports = function (eleventyConfig) {
     interval: 500,
   });
 
+  // HACK: #39 This is dumb and janky, but it works for now. We need to move the content out of the frontmatter an into the content of the markdown file.
+  eleventyConfig.addCollection("contentpages", function(collectionApi) {
+    const insertcode = `{% from "widgets/text.njk" import renderContent %} {{renderContent(content)}}`;
+    return collectionApi.getFilteredByTag("contentpages").map(page => {
+      if (!page.template.frontMatter.content.includes(insertcode)) {
+        page.template.frontMatter.content += insertcode;
+      }
+      return page;
+    });
+  });
+
   return {
     dir: {
       input: "src",
