@@ -30,3 +30,6 @@ content:
 tags:
   - contentpages
 ---
+
+{% from "widgets/text.njk" import renderContent %}
+{{renderContent(content)}}
