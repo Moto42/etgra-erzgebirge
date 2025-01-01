@@ -12,7 +12,8 @@ module.exports = {
       colors:{
         txinfomedia: {
           bg: {
-            main: 'rgba(148, 163, 184, 1)',
+            farback: 'rgba(148, 163, 184, 1)',
+            main: 'rgb(191, 203, 208);',
             aside: 'rgba(148, 163, 184, 1)',
             headings: 'rgb(41, 39, 111)',
             standout: "#86B0C1",
