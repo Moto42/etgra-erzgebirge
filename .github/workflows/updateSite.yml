@@ -39,8 +39,6 @@ jobs:
           key: site-content-
       - name: cd to site content
         run: cd ${{github.workspace}}/
-      - name: verify cache content exists
-        run: echo ${PWD}; ls _site
       - name: Upload Site Content
         uses: anvil-solutions/Fast-FTP-Action@2.1.3
         with:
