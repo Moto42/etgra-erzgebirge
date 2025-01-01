@@ -7,6 +7,7 @@ module.exports = {
       fontFamily: {
         // here for ease of adding things to the font-stack
         'sans': [...defaultTheme.fontFamily.sans],
+        'serif': ["Taviraj", ...defaultTheme.fontFamily.serif],
         'headers': ["Saira", ...defaultTheme.fontFamily.sans],
       },
       listStyleImage: {
