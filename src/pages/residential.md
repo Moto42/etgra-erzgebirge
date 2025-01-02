@@ -5,7 +5,7 @@ tags:
 ---
 Texas Info Media is the leader in home automation, AV Integration, and home networking.
 
-{% widgets_banner "h2" "Luxury Home Theater Design and Installation" "/images/uploads/spacetheater.jpg" %}
+{{ widgets_banner("h2","Luxury Home Theater Design and Installation","undefined" }}
 
 ![a luxury home theater](/images/uploads/theatre.jpg "Luxury Home theater")
 
