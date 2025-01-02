@@ -16,10 +16,9 @@
         prose-p:leading-relaxed prose-p:text-lg font-semibold
     "
 {{-endoneline}}>
-    {{content | parseMarkdown | safe}}
+    {{content | safe }}
 </div>
 {% endmacro %}
-
 
 {# 
     Renders a list of content items, applying different styles and components based on the item type.

@@ -1,5 +1,5 @@
 const dotenv = require("dotenv");
-const markdownit = require('markdown-it');
+const markdownit = require("markdown-it");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 
 // For passthroughcopy config, see https://www.11ty.dev/docs/copy/
@@ -15,7 +15,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("src/_static/");
   eleventyConfig.addPassthroughCopy({ "src/_static/": "/" });
 
-  eleventyConfig.addFilter("parseMarkdown", function(content){
+  eleventyConfig.addFilter("parseMarkdown", function (content) {
     const md = markdownit();
     return md.render(content);
   });
@@ -32,7 +32,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("envar", function (varname) {
     return process.env[varname];
   });
-  eleventyConfig.addShortcode("dumpToConsole", function(somevar){
+  eleventyConfig.addShortcode("dumpToConsole", function (somevar) {
     console.dir(somevar);
     return "";
   });
@@ -42,8 +42,8 @@ module.exports = function (eleventyConfig) {
   /**
    * Convert a multiline string to a single line
    */
-  eleventyConfig.addPairedShortcode("oneline", function(value) {
-    value = value.replaceAll(/\s+/g,' ');
+  eleventyConfig.addPairedShortcode("oneline", function (value) {
+    value = value.replaceAll(/\s+/g, " ");
     return value;
   });
 
@@ -53,15 +53,19 @@ module.exports = function (eleventyConfig) {
     interval: 500,
   });
 
-  // HACK: #39 This is dumb and janky, but it works for now. We need to move the content out of the frontmatter an into the content of the markdown file.
-  eleventyConfig.addCollection("contentpages", function(collectionApi) {
-    const insertcode = `{% from "widgets/text.njk" import renderContent %} {{renderContent(content)}}`;
-    return collectionApi.getFilteredByTag("contentpages").map(page => {
-      if (!page.template.frontMatter.content.includes(insertcode)) {
-        page.template.frontMatter.content += insertcode;
-      }
-      return page;
-    });
+  // Automatically import macros on every page
+  // (otherwise we need to manually include on each page that uses them)
+  // https://github.com/11ty/eleventy/issues/613#issuecomment-968189433
+  eleventyConfig.addCollection('all markdown files', (collectionApi) => {
+    // Note: Update the path to point to your macro file
+    const macroImport = `{% import "widgets/banners.njk" as banners with context %}`;
+    // Note: Update the pattern below to include all files that need macros imported
+    // Note: Collections don’t include layouts or includes, which still require importing macros manually
+    let collection = collectionApi.getFilteredByGlob('src/**/*.md');
+    collection.forEach((item) => {
+      item.template.frontMatter.content = `${macroImport}\n${item.template.frontMatter.content}`
+    })
+    return collection;
   });
 
   return {
