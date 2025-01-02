@@ -3,16 +3,17 @@ title: "TODO: DELETE ME"
 tags:
   - contentpages
 ---
-
 ## Test post
 
-{{ banners.headingBanner("h2","test banner","/images/uploads/eqprck.jpg") }}
+{{ banners.headingBanner("h2","test banner 2","/images/uploads/eqprck.jpg") }}
 
 There should be a test banner above me.
 
 The code for it is being added to the markdown, so we have that going for us I guess.
 
 Oh, it's crashing 11ty, what's wrong little guy? 
+
+ok. now what?
 
 ![](/images/uploads/uphigh.jpg)
 
