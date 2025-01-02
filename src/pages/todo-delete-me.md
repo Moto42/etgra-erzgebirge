@@ -4,11 +4,9 @@ tags:
   - contentpages
 ---
 
-{% from "widgets/banners.njk" import headingBanner %}
-
 ## Test post
 
-{{ headingBanner("h2","test banner","/images/uploads/eqprck.jpg") }}
+{{ banners.headingBanner("h2","test banner","/images/uploads/eqprck.jpg") }}
 
 There should be a test banner above me.
 
