@@ -67,9 +67,6 @@ It is absurdly easy for a once well planned and organized server room to become 
 
 Texas Info Media will disentangle this mess, and bring your server room back to the efficient, well organized state you need to get the most out of your equipment by improving reliability and reducing downtime.
 
-* type: text
-  text: >
-
 ## Long distance network bridging
 
 Putting multiple buildings on the same network can be a challenge. And as the distance between those sites increases, so does the difficulty.
