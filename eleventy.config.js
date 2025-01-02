@@ -53,6 +53,21 @@ module.exports = function (eleventyConfig) {
     interval: 500,
   });
 
+  // Automatically import macros on every page
+  // (otherwise we need to manually include on each page that uses them)
+  // https://github.com/11ty/eleventy/issues/613#issuecomment-968189433
+  eleventyConfig.addCollection('all markdown files', (collectionApi) => {
+    // Note: Update the path to point to your macro file
+    const macroImport = `{% import "widgets/banners.njk" as banners with context %}`;
+    // Note: Update the pattern below to include all files that need macros imported
+    // Note: Collections don’t include layouts or includes, which still require importing macros manually
+    let collection = collectionApi.getFilteredByGlob('src/**/*.md');
+    collection.forEach((item) => {
+      item.template.frontMatter.content = `${macroImport}\n${item.template.frontMatter.content}`
+    })
+    return collection;
+  });
+
   return {
     dir: {
       input: "src",
