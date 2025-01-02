@@ -160,6 +160,7 @@ collections:
           - numbered-list
         editor_components:
           - image
+          - widget_banner
       # - label: "Content"
       #   name: "content"
       #   required: true
