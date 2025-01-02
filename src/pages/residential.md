@@ -3,17 +3,11 @@ title: Residential
 tags:
   - contentpages
 ---
-
-
 Texas Info Media is the leader in home automation, AV Integration, and home networking.
 
-{{ banners.headingBanner("h2","Home Theater","/images/uploads/contentpages/banners/spacetheater.jpg") }}
-
-### Custom Home Theater Design & Installation
-
+{% widgets_banner "h2" "Custom Home Theater Design & Installation" "/images/uploads/spacetheater.jpg" %}
 
 ![a luxury home theater](/images/uploads/theatre.jpg "Luxury Home theater")
-
 
 Texas Info Media provides complete high-end Home Theater 
 
@@ -31,9 +25,7 @@ you expected. View our portfolio to see examples of our luxury home
 
 theater systems.
 
-
 ### EXPERIENCED HOME THEATER INSTALLATION
-
 
 Backed by years of project design and project management 
 
@@ -44,7 +36,6 @@ are among a select group of industry achievers. When you work with us,
 you’ll be getting the best home theater setup for your needs and your 
 
 space
-
 
 Texas Info Media has performed all project sizes, ranging from 
 
@@ -60,7 +51,6 @@ excellence.
 
 ### DOING LUXURY HOME THEATER SYSTEMS RIGHT
 
-
 Texas Info Media does home theater and related audio/video 
 
 installation the right way. We pay attention to all details, 
@@ -69,9 +59,7 @@ consistently communicate and get the project done right that is
 
 sophisticated, beautiful, organized and easy to use.
 
-
 ### HOME THEATER INSTALLATION FOLLOW-UP
-
 
 We follow up consistently to make sure the design and 
 
@@ -82,16 +70,13 @@ non-technical and lacking intimidation of industry jargon
 
 ### ONE-TOUCH CONTROL FOR THE BEST HOME THEATER
 
-
 Ease of use means you have everything on one remote and are 
 
 able to work your system without being overwhelmed with the technical 
 
 side.
 
-
 ### VIDEO AND AUDIO CALIBRATION
-
 
 Making your audio sound as best intended and your video 
 
@@ -104,36 +89,25 @@ the Imaging Science Foundation
 You take care of your home, it's only fair that your home take care of
 you.
 
-
 ### Full service for the lifetime of your home automation system
-
 
 Texas Info Media provides complete installation, and  programming services . We take care of everything, including integration with a custom home theater installation or commercial audio/visual system, and troubleshooting when things go awry.
 
-
 Plus, our automation services are available to customers around the world. No matter where you are located, either next to our Texas locations or halfway around the world, we’ll make sure you get the automation services that you need.
-
 
 ### The best and latest in home automation
 
-
 Texas Info Media has teamed with Josh.ai to bring our clients home's that not only respond at the push of a button, but to the sound of your voice; without the need of pre-programming ever detailed command you may need ahead of time.
-
 
 #### More than simple voice commands
 
-
 Your *in home* artificial intelligence listens, understands, and carries out your instructions. From as straightforward as "turn out the lights", to "Play some Jazz in the living room"
-
 
 #### Home AI that stays home
 
-
 Unlike most AI products, this system does not send your requests to a remote server to be processed and sent back. Everything is carried out on an AI Microserver, neatly tucked away in your home's network rack.
 
-
 ### Contact Our Team for an Automation Project Estimate
-
 
 Want to make your audio/visual systems and high-end home theater 
 
@@ -146,8 +120,7 @@ location. You can fill out the contact form on our website and we’ll be
 in touch with you as quickly as possible!
 
 {{ banners.headingBanner("h2","Networking","/images/uploads/contentpages/banners/eqprck.jpg") }}
-- type: text
-text: |-
+
 ### Connecting Everything
 
 The Internet has become an important part of both our work 
@@ -199,31 +172,23 @@ strong signal into an area that needs reception.
 With Texas Info Medie getting Internet and television services anywhere in
 the world is simple.
 
-
 Texas Info Media can help you choose a service provider to meet your needs, install and configure your satellite dish and receivers, and seamlessly connect everything together; with professional troubleshooting and repair to keep you connected.
-
 
 ### Satellite Internet
 
-
 No matter where you call home, you can still have the world at your fingertips with satellite Internet services.
-
 
 #### Starlink Installation
 
-
 Texas Info Media is a certified Starlink installation and service provider.
 
-
 ### Satellite Television
-
 
 Putting a galaxy of entertainment at your fingertips, 
 
 satellite television brings all the channels of the world, to your 
 
 doorstep.
-
 
 Texas Info Media is ready to install your new satellite TV 
 
