@@ -9,7 +9,7 @@
  #}
 {% macro rotatingBanner(bannersArray) %}
     <div 
-        class="h-60 relative overflow-hidden" 
+        class="h-60 relative overflow-hidden not-prose" 
         x-data="{currentslide:1}"
         x-init="$interval(()=>currentslide == {{bannersArray.length}} ? currentslide=1 : currentslide+=1,5000 )"
     >
@@ -65,6 +65,7 @@
         class="
             {{ heightClass[headinglevel] or 'h-12'}}
             p-4 flex items-end relative mt-6 mb-4
+            not-prose
         "
     >{%-endoneline%}
         <img {%oneline%}
