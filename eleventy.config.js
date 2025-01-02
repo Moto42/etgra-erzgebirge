@@ -1,5 +1,5 @@
 const dotenv = require("dotenv");
-const markdownit = require('markdown-it');
+const markdownit = require("markdown-it");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 
 // For passthroughcopy config, see https://www.11ty.dev/docs/copy/
@@ -15,7 +15,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("src/_static/");
   eleventyConfig.addPassthroughCopy({ "src/_static/": "/" });
 
-  eleventyConfig.addFilter("parseMarkdown", function(content){
+  eleventyConfig.addFilter("parseMarkdown", function (content) {
     const md = markdownit();
     return md.render(content);
   });
@@ -32,7 +32,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("envar", function (varname) {
     return process.env[varname];
   });
-  eleventyConfig.addShortcode("dumpToConsole", function(somevar){
+  eleventyConfig.addShortcode("dumpToConsole", function (somevar) {
     console.dir(somevar);
     return "";
   });
@@ -42,8 +42,8 @@ module.exports = function (eleventyConfig) {
   /**
    * Convert a multiline string to a single line
    */
-  eleventyConfig.addPairedShortcode("oneline", function(value) {
-    value = value.replaceAll(/\s+/g,' ');
+  eleventyConfig.addPairedShortcode("oneline", function (value) {
+    value = value.replaceAll(/\s+/g, " ");
     return value;
   });
 
@@ -51,17 +51,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setChokidarConfig({
     usePolling: true,
     interval: 500,
-  });
-
-  // HACK: #39 This is dumb and janky, but it works for now. We need to move the content out of the frontmatter an into the content of the markdown file.
-  eleventyConfig.addCollection("contentpages", function(collectionApi) {
-    const insertcode = `{% from "widgets/text.njk" import renderContent %} {{renderContent(content)}}`;
-    return collectionApi.getFilteredByTag("contentpages").map(page => {
-      if (!page.template.frontMatter.content.includes(insertcode)) {
-        page.template.frontMatter.content += insertcode;
-      }
-      return page;
-    });
   });
 
   return {
