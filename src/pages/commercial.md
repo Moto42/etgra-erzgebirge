@@ -5,8 +5,6 @@ tags:
 ---
 ## Commercial Audio & Visual Applications
 
-{{ banners.headingBanner("h2","Luxury home theater design and installation","undefined") }}
-
 Texas Info Media is a premier source for commercial audio systems and commercial sound systems. We offer complete commercial services that include, but are not limited to:
 
 * Video wall displays
