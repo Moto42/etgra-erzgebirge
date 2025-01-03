@@ -10,41 +10,24 @@ Texas Info Media is the leader in home automation, AV Integration, and home netw
 ![a luxury home theater](/images/uploads/theatre.jpg "Luxury Home theater")
 
 Texas Info Media provides complete high-end Home Theater 
-
 Design & Installation.  We handle the entire process from 
-
 consultation, complete floor plan CAD design, product layout design, 
-
-installation, calibration, seating, and acoustic treatments.  We work 
-
-with your contractor and other trades during the planning and 
-
-installation stages to insure your home theater experience is more than 
-
-you expected. View our portfolio to see examples of our luxury home 
-
-theater systems.
+installation, calibration, seating, and acoustic treatments.  We work
+with your contractor and other trades during the planning and installation stages to insure your home theater experience is more than 
+you expected. View our portfolio to see examples of our luxury home theater systems.
 
 ### EXPERIENCED HOME THEATER INSTALLATION
 
 Backed by years of project design and project management 
-
 expertise, you can be confident that our experience can work for you and we 
-
 are among a select group of industry achievers. When you work with us, 
-
 you’ll be getting the best home theater setup for your needs and your 
-
-space
+space.
 
 Texas Info Media has performed all project sizes, ranging from 
-
 the sophisticated and simplistic standard installations to projects 
-
 running hundreds of thousands of dollars in homes and structures valued 
-
 in the millions.  We have handled international and national projects 
-
 with complex logistical and project management requirements. There is no
 home theater installation project too big for our team to complete with
 excellence.
@@ -52,37 +35,28 @@ excellence.
 ### DOING LUXURY HOME THEATER SYSTEMS RIGHT
 
 Texas Info Media does home theater and related audio/video 
-
 installation the right way. We pay attention to all details, 
-
 consistently communicate and get the project done right that is 
-
 sophisticated, beautiful, organized and easy to use.
 
 ### HOME THEATER INSTALLATION FOLLOW-UP
 
 We follow up consistently to make sure the design and 
-
 installation is working for you as it was intended. A complete training 
-
 and walk-through education of system use is provided in a manner that is
 non-technical and lacking intimidation of industry jargon
 
 ### ONE-TOUCH CONTROL FOR THE BEST HOME THEATER
 
 Ease of use means you have everything on one remote and are 
-
 able to work your system without being overwhelmed with the technical 
-
 side.
 
 ### VIDEO AND AUDIO CALIBRATION
 
 Making your audio sound as best intended and your video 
-
 display look as it was intended to be viewed.  We are certified through 
-
-the Imaging Science Foundation
+the Imaging Science Foundation.
 
 {{ banners.headingBanner("h2","Home Automation","/images/uploads/contentpages/banners/touchtone.jpg") }}
 
@@ -110,13 +84,9 @@ Unlike most AI products, this system does not send your requests to a remote ser
 ### Contact Our Team for an Automation Project Estimate
 
 Want to make your audio/visual systems and high-end home theater 
-
 easier to use? Let our team get to work. Get in touch with us today to 
-
 get a project estimate on bringing our automation services to your 
-
 location. You can fill out the contact form on our website and we’ll be 
-
 in touch with you as quickly as possible!
 
 {{ banners.headingBanner("h2","Networking","/images/uploads/contentpages/banners/eqprck.jpg") }}
@@ -185,13 +155,10 @@ Texas Info Media is a certified Starlink installation and service provider.
 ### Satellite Television
 
 Putting a galaxy of entertainment at your fingertips, 
-
 satellite television brings all the channels of the world, to your 
-
 doorstep.
 
 Texas Info Media is ready to install your new satellite TV 
-
 system, or extend your current service to every room in your home. Texas
 Info Media also has the know how to troubleshoot and fix your satellite
 services, should they cause you trouble.
