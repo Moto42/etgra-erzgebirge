@@ -1,3 +1,9 @@
 {
-  "logo": "/images/uploads/logo_blue.png"
+  "logo": "/images/uploads/logo_blue.png",
+  "footerlinks": [
+    {
+      "text": "Privacy Statement",
+      "url": "/linkedfiles/TIMPrivacyStatement.pdf"
+    }
+  ]
 }
