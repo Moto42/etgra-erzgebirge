@@ -259,3 +259,17 @@ collections:
             allow_multiple: false
             choose_url: false
             hint: The logotype that will appear in the header and footer of the page.
+          - footerLinks:
+            label: "Footer Links"
+            name: "footerlinks"
+            widget: "list"
+            hint: Links that will appear in the footer of the page.
+            fields:
+              - label: "Link Text"
+                name: "text"
+                widget: "string"
+                hint: The text that will appear in the footer link.
+              - label: "Link URL"
+                name: "url"
+                widget: "string"
+                hint: The URL that the footer link will point to.
