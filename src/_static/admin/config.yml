@@ -259,3 +259,37 @@ collections:
             allow_multiple: false
             choose_url: false
             hint: The logotype that will appear in the header and footer of the page.
+          - footerLinks:
+            label: "Footer Links"
+            name: "footerlinks"
+            widget: "list"
+            hint: Links that will appear in the footer of the page.
+            types:
+              - label: "URL"
+                name: "link"
+                widget: "object"
+                fields:
+                  - label: "Link Text"
+                    name: "text"
+                    widget: "string"
+                    hint: The text that will appear in the footer link.
+                  - label: "Link URL"
+                    name: "url"
+                    widget: "string"
+                    hint: The URL that the footer link will point to.
+              - label: "Linked File"
+                name: "file"
+                widget: "object"
+                fields:
+                  - label: "Link Text"
+                    name: "text"
+                    widget: "string"
+                    hint: The text that will appear in the footer link.
+                  - label: "File"
+                    name: "url"
+                    widget: "file"
+                    hint: A file that will be linked in the footer.
+                    public_folder: /linkedfiles
+                    media_folder: /src/_static/linkedfiles 
+                    allow_multiple: false 
+                    choose_url: false
