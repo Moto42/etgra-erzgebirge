@@ -41,9 +41,10 @@
         <div class="mx-auto w-full">
         {% for item in content %}
                 {% if item.type == 'text' %}
-                        {{styledMarkdown(item.text)}}
+                    {% set outhtml = (item.text | parseMarkdown | safe) %}
+                    {{ styledMarkdown(outhtml) }}
                 {% elseif item.type == 'banner' %}
-                        {{headingBanner(item.headinglevel, item.heading, item.image)}}
+                    {{headingBanner(item.headinglevel, item.heading, item.image)}}
                 {% endif %}
         {% endfor %}
 </div>
