@@ -39,6 +39,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("random4Digit", function () {
     return Math.floor(1000 + Math.random() * 9000);
   });
+  eleventyConfig.addShortcode("sidebarLinkify", sidebarLinkify);
   /**
    * Convert a multiline string to a single line
    */
@@ -82,3 +83,46 @@ module.exports = function (eleventyConfig) {
     // pathPrefix: '/',
   };
 };
+
+/** Takes HTML and creates a list of links to each of the heading tags in the page
+ * 
+ * @param {string} html - HTML of the page
+ */
+function sidebarLinkify(html) {
+  // create an array of each of the headings in the page
+  const headings = html.match(/<h[1-6].*?>.*?<\/h[1-6]>/g);
+
+  if (!headings) return "";
+  // map each heading to a link to that heading's id, and adds a "data-headinglevel" attribute with the number of the heading level.
+  const links = headings.map((heading) => {
+    const id = (heading.match(/id=".*?"/)||['null'])[0].replace(/id="|"/g, "");
+    const text = heading.replace(/<.*?>|<\/.*?>/g, "");
+    const level = heading.match(/<h([1-6])/)[1];
+    return `<a href="#${id}" data-headinglevel="${level}">${text}</a>`;
+  });
+
+  /** convert the array of links to a string of HTML with each link in a set of 
+   *  nested unordered lists based on it's heading level, and returns the string.
+   */
+  let current_level = links[0].match(/data-headinglevel="(\d)"/)[1];
+  let depth = 1;
+  const ul_html = links.reduce((acc, link) => {
+    const level = link.match(/data-headinglevel="(\d)"/)[1];
+    if (level === current_level) {
+      return `${acc}<li>${link}</li>`;
+    } else if (level > current_level) {
+      current_level = level;
+      depth++;
+      return `${acc}<ul><li>${link}</li>`;
+    } else {
+      current_level = level;
+      while (depth > current_level) {
+        depth--;
+        acc += "</ul>";
+      }
+      return `${acc}<li>${link}</li>`;
+    }
+  }, "<ul>");
+
+  return ul_html;
+}
