@@ -9,7 +9,7 @@ between, containing left and right # sidebars and a cetral content section. #}
 <div class="flex flex-col md:flex-row grow w-full">
   {% if sidebar_left %}
   <aside class="bg-txinfomedia-bg-aside flex-none md:w-60">
-    {% block sidebar_left %} Left Sidebar {% endblock %}
+    {% block sidebar_left %} {% sidebarLinkify content %} {% endblock %}
   </aside>
   {% endif %}
   <main class="grow bg-txinfomedia-bg-main flex flex-col gap-4">
