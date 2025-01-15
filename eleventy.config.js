@@ -20,6 +20,8 @@ module.exports = function (eleventyConfig) {
     return md.render(content);
   });
 
+  eleventyConfig.addFilter("addIdsToHeadings", addIdsToHeadings);
+
   // TODO: #6 Document the shortcodes in the readme
   // Adding my own utility shortcodes
   eleventyConfig.addShortcode("thisYear", function () {
