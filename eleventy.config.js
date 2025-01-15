@@ -126,3 +126,20 @@ function sidebarLinkify(html) {
 
   return ul_html;
 }
+
+function idFromInnerText(text) {
+  return text.toLowerCase().replace(/[aeiou\s\W]/g, "");
+}
+
+/** takes HTML and adds an ID to all heading tags, using the idFromInnerText function to generate the id  returning the new html*/
+function addIdsToHeadings(html) {
+  const headings = html.match(/<h[1-6].*?>.*?<\/h[1-6]>/g);
+  if (!headings) return html;
+  const newHtml = headings.reduce((acc, heading) => {
+    const id = idFromInnerText(heading.replace(/<.*?>|<\/.*?>/g, ""));
+    const newheading = heading.replace(/<(h[1-6])(.*)>(.*)<\/(h[1-6])>/, `<$1 id="${id}" $2>$3</$4>`);
+    console.log('\n',heading,'\n',newheading);
+    return acc.replace(heading, newheading);
+  }, html);
+  return newHtml;
+}
