@@ -5,4 +5,4 @@ sidebar_left: true
 {% from "widgets/text.njk" import styledMarkdown %}
 {# Layout of the 'non special' pages that make up the bulk of the site #}
 
-{{ styledMarkdown(content)  }}
+{{ styledMarkdown(content) | addIdsToHeadings | safe }}
