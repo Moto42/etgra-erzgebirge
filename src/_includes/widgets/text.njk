@@ -50,3 +50,16 @@
 </div>
 {% endmacro %}
 
+{# Container for the results of SidebarLinkify
+
+    Will recieve HTML content consisting of nested <ul/> and <li/> elements.
+    Primarily here to keep the definition of the container div's classes neatly 
+    separated from the the layout.
+
+    @param {String} content - HTML content
+#}
+{% macro sidebarLinks(content) %}
+    <div class="not-prose">
+        {% sidebarLinkify content %}
+    </div>
+{% endmacro %}
