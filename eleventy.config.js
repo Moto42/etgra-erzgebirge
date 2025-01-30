@@ -106,17 +106,24 @@ function sidebarLinkify(html) {
   /** convert the array of links to a string of HTML with each link in a set of 
    *  nested unordered lists based on it's heading level, and returns the string.
    */
+  // the heading level of the set of headings we are currently in
   let current_level = links[0].match(/data-headinglevel="(\d)"/)[1];
+  // how deep into the stack of nested lists we are
   let depth = 1;
   const ul_html = links.reduce((acc, link) => {
+    // the heading level of the current link
     const level = link.match(/data-headinglevel="(\d)"/)[1];
     if (level === current_level) {
+      // if the level is the same as the current level, just add the link to the current list
       return `${acc}<li>${link}</li>`;
     } else if (level > current_level) {
+      // if the level is higher than the current level, add a new list and add the link to that list
       current_level = level;
       depth++;
       return `${acc}<ul><li>${link}</li>`;
     } else {
+      // if the level is lower than the current level, close lists until we are
+      // at the correct level, then add the link to the current list
       current_level = level;
       while (depth > current_level) {
         depth--;
