@@ -22,6 +22,12 @@
   "featurecards": [],
   "content": [
     {
+      "type": "banner",
+      "headinglevel": "h2",
+      "heading": "Under Construction",
+      "image": "/images/uploads/frontpage/banners/types-of-new-construction-homes-1-1024x655.jpg"
+    },
+    {
       "type": "text",
       "text": "Texas Info Media is a world leader in commercial and residential electronics installation, Audio/Video integration, and luxury home theater design."
     },
